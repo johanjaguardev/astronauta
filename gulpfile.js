@@ -1,12 +1,16 @@
 const { src, dest, watch, series } = require('gulp')
 
 const sass = require('gulp-sass')(require('sass')),
-  gulp   = require('gulp'),
   jshint = require('gulp-jshint'),
+  gulp = require('gulp'),
   sourcemaps = require('gulp-sourcemaps'),
   concat = require('gulp-concat'),
   uglify = require('gulp-uglify'),
-  imagemin = require('gulp-imagemin')
+  imagemin = require('gulp-imagemin'),
+  browserSync = require('browser-sync')
+
+
+const server = browserSync.create()
 
 // DIRECTORIES
 const SASS_DIR = "src/scss/**/*.scss",
@@ -66,6 +70,11 @@ function watchImg() {
   watch(IMG_DIR, imgSquash);
 }
 
+function reload(done) {
+  server.reload()
+  done()
+}
+
 exports.compileSass = compileSass
 exports.jsHint = jsHint
 exports.jsBuild = jsBuild
@@ -75,7 +84,11 @@ exports.watchJs = watchJs
 exports.watchImg = watchImg
 
 exports.default = () => {
-  watch(SASS_DIR, series(compileSass))
-  watch(JS_DIR, series(jsHint, jsBuild))
-  watch(IMG_DIR, series(imgSquash))
+  server.init({
+    browser: "chrome",
+    proxy: "http://localhost/meraki"
+  })
+  watch(SASS_DIR, series(compileSass,reload))
+  watch(JS_DIR, series(jsHint, jsBuild, reload))
+  watch(IMG_DIR, series(imgSquash, reload))
 }
