@@ -1,14 +1,13 @@
 /*
-Theme Name: Demo theme
-Theme URI: http://www.cssigniter.com/themes/demotheme
-Author: CSSIgniter
-Author URI: http://www.cssigniter.com
-Description: A theme description
-Version: 1.0
+Theme Name: Astronauta
+Theme URI: https://github.com/johanjaguardev/astronauta
+Author: Johan Vargas (Developer) - Cristian Gonzalez (Visual Designer)
+Author URI: https://github.com/johanjaguardev
+Description: Base theme for Astronauta WP Projects
+Version: 2.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 */
-
 /* -----------------------------------------
 	Table of Contents
 --------------------------------------------
@@ -22,11 +21,11 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .. 07. WordPress defaults
 .. 08. Utilities
 */
-
 body {
   background-color: red;
 }
 
 body {
+  background-color: green;
   color: cyan;
 }

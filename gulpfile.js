@@ -1,30 +1,94 @@
-const gulp = require('gulp')
-const plumber = require('gulp-plumber')
-const sass = require('gulp-sass')(require('sass'))
-const postcss = require('gulp-postcss')
-const autoprefixer = require('autoprefixer')
-const sourcemaps = require('gulp-sourcemaps')
-const groupmq = require('gulp-group-css-media-queries')
-const bs = require('browser-sync')
+const { src, dest, watch, series } = require('gulp')
 
-const SASS_SOURCES = [
-  '**/*.scss', // All other Sass files in the /css directory
-];
+const sass = require('gulp-sass')(require('sass')),
+  jshint = require('gulp-jshint'),
+  gulp = require('gulp'),
+  sourcemaps = require('gulp-sourcemaps'),
+  concat = require('gulp-concat'),
+  uglify = require('gulp-uglify'),
+  imagemin = require('gulp-imagemin'),
+  browserSync = require('browser-sync')
 
-gulp.task('compile:sass', () =>
-  gulp.src(SASS_SOURCES, { base: 'src/scss' })
-    .pipe(plumber()) // Prevent termination on error
-    .pipe(sass({
-      indentType: 'tab',
-      indentWidth: 1,
-      outputStyle: 'expanded', // Expanded so that our CSS is readable
-    })).on('error', sass.logError)
-    .pipe(postcss([
-      autoprefixer({
-        browsers: ['last 2 versions'],
-        cascade: false,
-      })
-    ]))
-    .pipe(groupmq()) // Group media queries!
-    .pipe(gulp.dest('.')) // Output compiled files in the same dir as Sass sources
-    .pipe(bs.stream())); // Stream to browserSync
+
+const server = browserSync.create()
+
+// DIRECTORIES
+const SASS_DIR = "src/scss/**/*.scss",
+  JS_DIR = "src/js/**/*.js",
+  IMG_DIR = "src/images/**/*"
+
+function compileSass(done) {
+  src(SASS_DIR)
+  .pipe(sass().on('error', sass.logError))
+  .pipe(dest('.'))
+ done()
+}
+function watchSass() {
+  watch(SASS_DIR, compileSass);
+}
+
+function jsHint(cb) {
+  src(JS_DIR)
+  .pipe(jshint('.jshintrc'))
+  .pipe(jshint.reporter('jshint-stylish'))
+  cb()
+}
+
+function jsBuild(cb) {
+  src(JS_DIR)
+  .pipe(sourcemaps.init())
+  .pipe(concat('bundle.js'))
+  //only uglify if gulp is ran with '--type production'
+  .pipe(uglify())
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('.'))
+  cb()
+}
+
+function watchJs() {
+  watch(JS_DIR, jsHint, jsBuild);
+}
+
+function imgSquash(cb) {
+  src(IMG_DIR)
+  .pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({
+      plugins: [
+        {removeViewBox: true},
+        {cleanupIDs: false}
+      ]
+    })
+  ]))
+  .pipe(gulp.dest("./images"))
+  cb()
+}
+
+function watchImg() {
+  watch(IMG_DIR, imgSquash);
+}
+
+function reload(done) {
+  server.reload()
+  done()
+}
+
+exports.compileSass = compileSass
+exports.jsHint = jsHint
+exports.jsBuild = jsBuild
+exports.imgSquash = imgSquash
+exports.watchSass = watchSass
+exports.watchJs = watchJs
+exports.watchImg = watchImg
+
+exports.default = () => {
+  server.init({
+    browser: "chrome",
+    proxy: "http://localhost/meraki"
+  })
+  watch(SASS_DIR, series(compileSass,reload))
+  watch(JS_DIR, series(jsHint, jsBuild, reload))
+  watch(IMG_DIR, series(imgSquash, reload))
+}
