@@ -23,10 +23,17 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .. 08. Utilities
 */
 
-body {
-  background-color: red;
-}
+@import 'partials/variables';
+@import 'partials/mixins';
+@import 'partials/base';
+@import 'partials/header';
+@import 'partials/modules';
+@import 'partials/footer';
+@import 'partials/comments';
+@import 'partials/widgets';
+@import 'partials/wp-defaults';
+@import 'partials/utilities';
 
-body {
-  color: cyan;
+body { 
+	color: cyan;
 }
