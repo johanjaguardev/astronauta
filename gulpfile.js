@@ -16,6 +16,8 @@ const server = browserSync.create()
 const SASS_DIR = "src/scss/**/*.scss",
   JS_DIR = "src/js/**/*.js",
   IMG_DIR = "src/images/**/*",
+  TP_DIR = "src/template-parts/**/*.php",
+  SHORTCODES_DIR = "src/shortcodes/**/*.php"
   SASS_FINAL = ".",
   JS_FINAL = ".",
   JS_BUNDLE = "bundle.js",
@@ -104,4 +106,7 @@ exports.default = () => {
   watch(SASS_DIR, series(compileSass,reload))
   watch(JS_DIR, series(jsHint, jsBuild, reload))
   watch(IMG_DIR, series(imgSquash, reload))
+  watch(TP_DIR, reload)
+  watch(SHORTCODES_DIR, reload)
+  watch(['index.php', 'header.php', 'footer.php', 'functions.php'], reload)
 }
