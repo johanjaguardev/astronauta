@@ -1,15 +1,18 @@
-const { src, dest, watch } = require('gulp')
+const { src, dest, watch, series } = require('gulp')
 
 const sass = require('gulp-sass')(require('sass')),
   gulp   = require('gulp'),
   jshint = require('gulp-jshint'),
   sourcemaps = require('gulp-sourcemaps'),
   concat = require('gulp-concat'),
-  uglify = require('gulp-uglify')
+  uglify = require('gulp-uglify'),
+  imagemin = require('gulp-imagemin')
 
 // DIRECTORIES
-const SASS_DIR = "src/scss/**/*.scss"
-const JS_DIR = "src/js/**/*.js"
+const SASS_DIR = "src/scss/**/*.scss",
+  JS_DIR = "src/js/**/*.js",
+  IMG_DIR = "src/images/**/*"
+
 function compileSass(done) {
   src(SASS_DIR)
   .pipe(sass().on('error', sass.logError))
@@ -42,10 +45,37 @@ function watchJs() {
   watch(JS_DIR, jsHint, jsBuild);
 }
 
+function imgSquash(cb) {
+  src(IMG_DIR)
+  .pipe(imagemin([
+    imagemin.gifsicle({interlaced: true}),
+    imagemin.mozjpeg({quality: 75, progressive: true}),
+    imagemin.optipng({optimizationLevel: 5}),
+    imagemin.svgo({
+      plugins: [
+        {removeViewBox: true},
+        {cleanupIDs: false}
+      ]
+    })
+  ]))
+  .pipe(gulp.dest("./images"))
+  cb()
+}
 
+function watchImg() {
+  watch(IMG_DIR, imgSquash);
+}
 
 exports.compileSass = compileSass
-exports.watchSass = watchSass
 exports.jsHint = jsHint
 exports.jsBuild = jsBuild
+exports.imgSquash = imgSquash
+exports.watchSass = watchSass
 exports.watchJs = watchJs
+exports.watchImg = watchImg
+
+exports.default = () => {
+  watch(SASS_DIR, series(compileSass))
+  watch(JS_DIR, series(jsHint, jsBuild))
+  watch(IMG_DIR, series(imgSquash))
+}
