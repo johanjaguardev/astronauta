@@ -22,7 +22,7 @@ function watchSass() {
 
 function jsHint(cb) {
   src(JS_DIR)
-  .pipe(jshint())
+  .pipe(jshint('.jshintrc'))
   .pipe(jshint.reporter('jshint-stylish'))
   cb()
 }
@@ -34,12 +34,12 @@ function jsBuild(cb) {
   //only uglify if gulp is ran with '--type production'
   .pipe(uglify())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('public/assets/javascript'))
+  .pipe(gulp.dest('.'))
   cb()
 }
 
 function watchJs() {
-  watch(JS_DIR, jsHint);
+  watch(JS_DIR, jsHint, jsBuild);
 }
 
 
