@@ -12,4 +12,7 @@ get_template_part( $tpPath.'test', null, array(
   )) 
 );
 ?>
+
+<hr>
+<?php get_template_part( $tpPath.'specific-page', null, array( 'page' => 'home'));?>
 <?php get_footer();?>

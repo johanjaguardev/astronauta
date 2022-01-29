@@ -108,4 +108,5 @@ exports.default = () => {
   watch(IMG_DIR, series(imgSquash, reload))
   watch(TP_DIR, reload)
   watch(SHORTCODES_DIR, reload)
+  watch(['index.php', 'header.php', 'footer.php', 'functions.php'], reload)
 }
