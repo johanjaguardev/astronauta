@@ -13,11 +13,15 @@ function compileSass(done) {
 function watchSass() {
   watch(SASS_DIR, compileSass);
 }
+
 function jsHint(cb) {
   src(JS_DIR)
   .pipe(jshint())
   .pipe(jshint.reporter('jshint-stylish'))
   cb()
+}
+function watchJs() {
+  watch(JS_DIR, jsHint);
 }
 
 
@@ -25,3 +29,4 @@ function jsHint(cb) {
 exports.compileSass = compileSass
 exports.watchSass = watchSass
 exports.jsHint = jsHint
+exports.watchJs = watchJs
