@@ -9,6 +9,7 @@ const sass = require('gulp-sass')(require('sass')),
   imagemin = require('gulp-imagemin'),
   browserSync = require('browser-sync')
 
+
 const server = browserSync.create()
 
 // DIRECTORIES
