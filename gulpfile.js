@@ -1,4 +1,4 @@
-const { src, dest, watch, series } = require('gulp')
+const { src, dest, watch, series, parallel } = require('gulp')
 
 const sass = require('gulp-sass')(require('sass')),
   jshint = require('gulp-jshint'),
@@ -16,13 +16,17 @@ const server = browserSync.create()
 const SASS_DIR = "src/scss/**/*.scss",
   JS_DIR = "src/js/**/*.js",
   IMG_DIR = "src/images/**/*",
+  SASS_FINAL = ".",
+  JS_FINAL = ".",
+  JS_BUNDLE = "bundle.js",
+  IMG_FINAL = "./images",
   SITE_NAME = "meraki"
 
 
 function compileSass(done) {
   src(SASS_DIR)
   .pipe(sass().on('error', sass.logError))
-  .pipe(dest('.'))
+  .pipe(dest(SASS_FINAL))
  done()
 }
 function watchSass() {
@@ -39,11 +43,11 @@ function jsHint(cb) {
 function jsBuild(cb) {
   src(JS_DIR)
   .pipe(sourcemaps.init())
-  .pipe(concat('bundle.js'))
+  .pipe(concat(JS_BUNDLE))
   //only uglify if gulp is ran with '--type production'
   .pipe(uglify())
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('.'))
+  .pipe(gulp.dest(JS_FINAL))
   cb()
 }
 
@@ -64,7 +68,7 @@ function imgSquash(cb) {
       ]
     })
   ]))
-  .pipe(gulp.dest("./images"))
+  .pipe(gulp.dest(IMG_FINAL))
   cb()
 }
 
@@ -77,6 +81,12 @@ function reload(done) {
   done()
 }
 
+function copy(cb) {
+  src(['images/', 'bundle.js', 'style.css'], {base: './'})
+  .pipe(gulp.dest('dist/'))
+  cb()
+}
+
 exports.compileSass = compileSass
 exports.jsHint = jsHint
 exports.jsBuild = jsBuild
@@ -84,6 +94,7 @@ exports.imgSquash = imgSquash
 exports.watchSass = watchSass
 exports.watchJs = watchJs
 exports.watchImg = watchImg
+exports.copy = copy
 
 exports.default = () => {
   server.init({
