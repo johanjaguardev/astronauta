@@ -15,7 +15,9 @@ const server = browserSync.create()
 // DIRECTORIES
 const SASS_DIR = "src/scss/**/*.scss",
   JS_DIR = "src/js/**/*.js",
-  IMG_DIR = "src/images/**/*"
+  IMG_DIR = "src/images/**/*",
+  SITE_NAME = "meraki"
+
 
 function compileSass(done) {
   src(SASS_DIR)
@@ -86,7 +88,7 @@ exports.watchImg = watchImg
 exports.default = () => {
   server.init({
     browser: "chrome",
-    proxy: "http://localhost/meraki"
+    proxy: `http://localhost/${SITE_NAME}`
   })
   watch(SASS_DIR, series(compileSass,reload))
   watch(JS_DIR, series(jsHint, jsBuild, reload))
