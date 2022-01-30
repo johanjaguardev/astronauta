@@ -1,4 +1,14 @@
-<?php add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
+<?php
+/** * Completely Remove jQuery From WordPress */
+function my_init() {
+  if (!is_admin()) {
+      wp_deregister_script('jquery');
+      wp_register_script('jquery', false);
+  }
+}
+add_action('init', 'my_init');
+
+add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 add_action( 'wp_enqueue_scripts', 'bundleJS' );
 function bundleJS() {
   wp_enqueue_script(
