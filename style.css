@@ -22,7 +22,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .. 08. Utilities
 */
 body {
-  background-color: red;
+  background-image: url(images/bg.png);
+  background-size: contain;
 }
 
 body {

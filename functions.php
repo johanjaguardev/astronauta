@@ -7,7 +7,7 @@ function my_init() {
   }
 }
 add_action('init', 'my_init');
-
+add_theme_support( 'custom-logo');
 add_theme_support( 'post-thumbnails', array( 'post', 'page' ) );
 add_action( 'wp_enqueue_scripts', 'bundleJS' );
 function bundleJS() {
