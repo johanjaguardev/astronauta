@@ -25,7 +25,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://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@github.com/johanjaguardev/astronauta.git"
+    "url": "git+https://github.com/johanjaguardev/astronauta.git"
   },
   "keywords": [
     "gulp",
