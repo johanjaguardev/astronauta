@@ -1,0 +1,41 @@
+{
+  "name": "astronauta",
+  "version": "2.0.0",
+  "description": "Wordpress theme used to Astronauta WP Sites",
+  "main": "bundle.js",
+  "type": "commonjs",
+  "dependencies": {
+    "gulp": "^4.0.2"
+  },
+  "devDependencies": {
+    "browser-sync": "^2.27.7",
+    "gulp-cli": "^2.3.0",
+    "gulp-concat": "^2.6.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-jshint": "^2.1.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "jshint": "^2.13.4",
+    "sass": "^1.49.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://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@github.com/johanjaguardev/astronauta.git"
+  },
+  "keywords": [
+    "gulp",
+    "vanilla",
+    "js",
+    "wordpress"
+  ],
+  "author": "Johan Vargas Sánchez",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/johanjaguardev/astronauta/issues"
+  },
+  "homepage": "https://github.com/johanjaguardev/astronauta#readme"
+}
