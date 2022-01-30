@@ -21,6 +21,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .. 07. WordPress defaults
 .. 08. Utilities
 */
+@import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
 /*
 Small (smaller than 640px)
 Medium (641px to 1007px)
@@ -30,6 +31,8 @@ SCREEN SIZES
 body {
   background-image: url(images/bg.png);
   background-size: contain;
+  font-family: "Maven Pro", sans-serif;
+  font-size: 16px;
 }
 
 .container {
@@ -47,6 +50,25 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  padding: 3.75rem 0;
+}
+.header__container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.header__nav {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.header__menu ul {
+  list-style: none;
+}
+.header__menu ul li a {
+  color: white;
+  font-weight: 600;
+  text-decoration: none;
 }
 
 body {

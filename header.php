@@ -10,6 +10,11 @@
         <div class="header__logo">
           <?php the_custom_logo()?>
         </div>
+        <nav class="header__nav">
+        <?php wp_nav_menu( array( 
+          'theme_location' => 'header__menu', 
+          'container_class' => 'header__menu' ) ); ?>
+        </nav>
       </div>
     </header>
   
