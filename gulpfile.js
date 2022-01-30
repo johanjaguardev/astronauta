@@ -106,7 +106,7 @@ exports.copy = copy
 exports.default = () => {
   server.init({
     browser: "chrome",
-    proxy: `http://localhost/${SITE_NAME}`
+    proxy: `http://localhost:10004/${SITE_NAME}`
   })
   watch(SASS_DIR, series(compileSass,reload))
   watch(JS_DIR, series(jsHint, jsBuild, reload))
