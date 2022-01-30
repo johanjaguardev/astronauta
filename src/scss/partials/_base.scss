@@ -1,4 +1,14 @@
 body {
   background-image: url(images/bg.png);
-  background-size: contain  ;
+  background-size: contain;
+}
+
+.container {
+  max-width: 100%;
+  width: $screen_L;
+  
+
+  @media screen and (max-width: $screen_L) {
+    width: $screen_M;
+  }
 }

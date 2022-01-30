@@ -21,9 +21,32 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .. 07. WordPress defaults
 .. 08. Utilities
 */
+/*
+Small (smaller than 640px)
+Medium (641px to 1007px)
+Large (1008px and larger)
+SCREEN SIZES
+*/
 body {
   background-image: url(images/bg.png);
   background-size: contain;
+}
+
+.container {
+  max-width: 100%;
+  width: 1366px;
+}
+@media screen and (max-width: 1366px) {
+  .container {
+    width: 768px;
+  }
+}
+
+.header {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 body {

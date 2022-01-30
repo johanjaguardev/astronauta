@@ -16,5 +16,5 @@ function bundleJS() {
     get_template_directory_uri() . '/bundle.js', NULL, NULL, true
   );
 }
-
+ 
 ?>

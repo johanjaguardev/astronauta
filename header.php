@@ -6,8 +6,10 @@
   </head>
   <body>
     <header class="header">
-      <div class="header__logo">
-        <?php the_custom_logo()?>
+      <div class="container header__container">
+        <div class="header__logo">
+          <?php the_custom_logo()?>
+        </div>
       </div>
     </header>
   
