@@ -5,5 +5,9 @@
     <?php wp_head(); ?>
   </head>
   <body>
-    <h1>header</h1>
+    <header class="header">
+      <div class="header__logo">
+        <?php the_custom_logo()?>
+      </div>
+    </header>
   
