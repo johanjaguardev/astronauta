@@ -1,0 +1,52 @@
+.header {
+  align-items: center;
+  background-color: transparent;
+  display: flex;
+  flex-direction: row;  
+  height: 100vh;
+  justify-content: center;
+  padding: rem(60px) 0;
+  position: relative;
+  transition: .8s ease-in-out all;
+  transform: translateY(-45vh);
+
+  &.open {
+    background-color: lime;
+    left: 0;
+    position: absolute;
+    transform: translateY(0);
+    top: 0;
+    width: 100%;
+
+    .header__nav {
+      width: 100%;
+    }
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+
+  &__nav {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+  }
+  &__menu {
+    ul {
+      list-style: none;
+      li {
+        a {
+          color: $color__white;
+          font-weight: 600;
+          text-decoration: none;
+        }
+      }
+    }
+  }
+
+
+}

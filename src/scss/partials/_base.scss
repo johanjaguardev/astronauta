@@ -1,4 +1,16 @@
 body {
   background-image: url(images/bg.png);
-  background-size: contain  ;
+  background-size: contain;
+  font-family: $font__main;
+  font-size: 16px;
+}
+
+.container {
+  max-width: 100%;
+  width: $screen__L;
+  
+
+  @media screen and (max-width: $screen__L) {
+    width: $screen__M;
+  }
 }
