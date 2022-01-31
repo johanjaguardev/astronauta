@@ -1,11 +1,16 @@
 .hamburguer {
+  align-items: flex-end;
   cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
   &__stick {
     background-color: $color__white;
     border-radius: rem(3px);
     height: rem(10px);
-    margin: rem(10px) auto;
-    transition: 1s ease-in-out all;
+    margin: rem(5px);
+    transition: .8s ease-in-out all;
     width: rem(64px);
   }
 
