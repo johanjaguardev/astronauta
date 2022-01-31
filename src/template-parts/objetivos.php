@@ -34,25 +34,30 @@ $conteo = 0;
         array_push($arr_dots, $conteo);
         $conteo++;
       ?>
-
-        <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-      <?php if ( has_post_thumbnail() ) :
-        the_post_thumbnail();
-      endif;?>
-          <header class="entry-header">
-            <h1 class="entry-title"><?php the_title(); ?></h1>
-          </header>
-          <div class="entry-content">
-            <?php the_excerpt(); ?>
-            <a href="<?php the_permalink(); ?>">Read More</a>
+      <?php if ( $conteo%2 == 0 ):?>
+        <article class="objetivos-siema__item pair">
+      <?php else:?>
+        <article class="objetivos-siema__item unpair">
+      <?php endif;?>
+          <div class="objetivos-siema__left">
+            <div class="objetivos-siema__number">
+              <?php echo $conteo;?>
+            </div>
+          </div>
+          <div class="objetivos-siema__right">
+            <h3 class="objetivos-siema__title"><?php the_title(); ?></h3>
+            <div class="objetivos-siema__content">
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>">...</a>
+            </div>
           </div>
         </article>
     <?php endwhile;
   endif;?>
       </div>
       <div class="objetivos-siema__sides siema__sides">
-        <button class="objetivos-siema__side siema__prev">prev</button>
-        <button class="objetivos-siema__side siema__next">next</button>
+        <button class="objetivos-siema__side siema__side siema__prev"><</button>
+        <button class="objetivos-siema__side siema__side siema__next">></button>
       </div>
       <?php if( count($arr_dots) ):?>
         <div class="objetivos-siema__dots siema__dots">
