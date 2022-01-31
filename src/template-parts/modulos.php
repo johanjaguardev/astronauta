@@ -30,7 +30,7 @@ $conteo = 0;
       <h2><?php echo $title;?></h2>
     </div>
     <div class="modulos__carousel">
-      <div class="modulos-siema">
+      <div class="modulos">
   <?php if ( $arr_posts->have_posts() ) :
     while ( $arr_posts->have_posts() ) :
       $arr_posts->the_post();
@@ -38,33 +38,33 @@ $conteo = 0;
         $conteo++;
       ?>
       <?php if ( $conteo%2 == 0 ):?>
-        <article class="modulos-siema__item pair">
+        <article class="modulos__item pair">
       <?php else:?>
-        <article class="modulos-siema__item unpair">
+        <article class="modulos__item unpair">
       <?php endif;?>
-          <div class="modulos-siema__1">
-            <div class="modulos-siema__svg modulos-siema__svg-1">
+          <div class="modulos__1">
+            <div class="modulos__svg modulos__svg-1">
               <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
-              <h3 class="modulos-siema__title-1"><?php the_title();?></h3>
+              <h3 class="modulos__title-1"><?php the_title();?></h3>
             </div>
           </div>
-          <div class="modulos-siema__2" style="background-image: url(<?php echo $image;?>)">
-            <div class="modulos-siema__2-box">
-              <div class="modulos-siema__2-row-1">
-                <div class="modulos-siema__2-left">
-                  <div class="modulos-siema__svg modulos-siema__svg-2">
+          <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+            <div class="modulos__2-box">
+              <div class="modulos__2-row-1">
+                <div class="modulos__2-left">
+                  <div class="modulos__svg modulos__svg-2">
                     <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
                   </div>
-                  <h3 class="modulos-siema__title-2"><?php the_title(); ?></h3>
+                  <h3 class="modulos__title-2"><?php the_title(); ?></h3>
                 </div>
-                <div class="modulos-siema__2-right">
-                  <figure class="modulos-siema__figure">
-                    <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos-siema__img"/>  
+                <div class="modulos__2-right">
+                  <figure class="modulos__figure">
+                    <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
                   </figure>
                 </div>
               </div>
-              <div class="modulos-siema__2-row-2">
-                <div class="modulos-siema__content">
+              <div class="modulos__2-row-2">
+                <div class="modulos__content">
                   <?php the_excerpt(); ?>
                   <a href="<?php the_permalink(); ?>">...</a>
                 </div>
@@ -76,17 +76,6 @@ $conteo = 0;
     <?php endwhile;
   endif;?>
       </div>
-      <div class="modulos-siema__sides siema__sides">
-        <button class="modulos-siema__side siema__side siema__prev"><</button>
-        <button class="modulos-siema__side siema__side siema__next">></button>
-      </div>
-      <?php if( count($arr_dots) ):?>
-        <div class="modulos-siema__dots siema__dots">
-          <?php foreach ($arr_dots as &$dot):?>
-            <button class="modulos-siema__dot siema__dot" data-number=<?php echo $dot?>><?php echo $dot + 1?></button>
-          <?php endforeach;?>
-        </div>
-      <?php endif;?>
     </div>
   </div>
 </div>
