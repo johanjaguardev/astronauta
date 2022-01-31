@@ -1,5 +1,7 @@
 .modulos {
-
+  &__overlay {
+    overflow-y: hidden;
+  }
   &__grid {
     display: flex;
     flex-direction: row;

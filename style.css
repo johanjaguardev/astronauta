@@ -224,6 +224,9 @@ body {
   text-decoration: none;
 }
 
+.modulos__overlay {
+  overflow-y: hidden;
+}
 .modulos__grid {
   display: flex;
   flex-direction: row;
