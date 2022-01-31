@@ -3,7 +3,16 @@ $tpPath = "src/template-parts/";
 $shortcodesPath = "src/shortcodes/";
 get_header();?>
 
-<?php get_template_part( $tpPath.'specific-page', null, array( 'page' => 'home'));?>
+<?php get_template_part( $tpPath.'specific-page', null, array(
+  'page' => 'home',
+  'columns' => 2,
+  'imageBg' => false
+));?>
+<?php get_template_part( $tpPath.'specific-page', null, array(
+  'page' => 'hero',
+  'columns' => 2,
+  'imageBg' => true
+));?>
 
 
 <?php //get_template_part( $tpPath.'specific-page', null, array( 'page' => 'home'));?>

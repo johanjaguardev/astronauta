@@ -1,6 +1,7 @@
 <html>
   <head>
     <title>Astronauta 2.0</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="<?php bloginfo('stylesheet_url');?>">
     <?php wp_head(); ?>
   </head>
@@ -16,8 +17,6 @@
             <div class="hamburguer__stick-1 hamburguer__stick"></div>
             <div class="hamburguer__stick-2 hamburguer__stick"></div>
             <div class="hamburguer__stick-3 hamburguer__stick"></div>
-
-
           </div>
           <?php endif;?>
         <?php wp_nav_menu( array( 

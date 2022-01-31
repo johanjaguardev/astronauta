@@ -17,22 +17,6 @@
       display: none;
     }
 
-    &-left, &-right {
-      width: 50%;
-
-      @media screen and (max-width: $screen__M) {
-        justify-content: space-between;
-        width: 100%;
-      }
-    }
-
-    &-img {
-      img {
-        height: auto;
-        max-width: 100%;
-      }
-    }
-
     &-content {
       color: $color__white;
       font-size: rem(82px);
