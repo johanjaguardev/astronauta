@@ -29,53 +29,449 @@ $conteo = 0;
       </div>   
       <h2><?php echo $title;?></h2>
     </div>
-    <div class="modulos__carousel">
-      <div class="modulos">
-  <?php if ( $arr_posts->have_posts() ) :
-    while ( $arr_posts->have_posts() ) :
-      $arr_posts->the_post();
-        array_push($arr_dots, $conteo);
-        $conteo++;
-      ?>
-      <?php if ( $conteo%2 == 0 ):?>
-        <article class="modulos__item pair">
-      <?php else:?>
-        <article class="modulos__item unpair">
-      <?php endif;?>
-          <div class="modulos__1">
-            <div class="modulos__svg modulos__svg-1">
-              <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
-              <h3 class="modulos__title-1"><?php the_title();?></h3>
+    <div class="modulos__grid">
+<?php if ( $arr_posts->have_posts() ) :
+  while ( $arr_posts->have_posts() ) :
+    $arr_posts->the_post();
+      array_push($arr_dots, $conteo);
+      $conteo++;
+    ?>
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
             </div>
           </div>
-          <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
-            <div class="modulos__2-box">
-              <div class="modulos__2-row-1">
-                <div class="modulos__2-left">
-                  <div class="modulos__svg modulos__svg-2">
-                    <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
-                  </div>
-                  <h3 class="modulos__title-2"><?php the_title(); ?></h3>
-                </div>
-                <div class="modulos__2-right">
-                  <figure class="modulos__figure">
-                    <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
-                  </figure>
-                </div>
-              </div>
-              <div class="modulos__2-row-2">
-                <div class="modulos__content">
-                  <?php the_excerpt(); ?>
-                  <a href="<?php the_permalink(); ?>">...</a>
-                </div>
-              </div>
-            </div>
 
+        </div>
+      </article>
+
+
+      <!-- inicio dummy  -->
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
           </div>
-        </article>
-    <?php endwhile;
-  endif;?>
-      </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <article class="modulos__item">
+        <div class="modulos__1">
+          <div class="modulos__svg modulos__svg-1">
+            <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+            <h3 class="modulos__title-1"><?php the_title();?></h3>
+          </div>
+        </div>
+        <div class="modulos__2" style="background-image: url(<?php echo $image;?>)">
+          <div class="modulos__2-box">
+            <div class="modulos__2-row-1">
+              <div class="modulos__2-left">
+                <div class="modulos__svg modulos__svg-2">
+                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                </div>
+                <h3 class="modulos__title-2"><?php the_title(); ?></h3>
+              </div>
+              <div class="modulos__2-right">
+                <figure class="modulos__figure">
+                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos__img"/>  
+                </figure>
+              </div>
+            </div>
+            <div class="modulos__2-row-2">
+              <div class="modulos__content">
+                <?php the_excerpt(); ?>
+                <a href="<?php the_permalink(); ?>">...</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </article>
+
+      <!-- fin dummy -->
+  <?php endwhile;
+endif;?>
     </div>
   </div>
+
 </div>

@@ -224,6 +224,16 @@ body {
   text-decoration: none;
 }
 
+.modulos__grid {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+  justify-content: space-between;
+}
+.modulos__item {
+  padding-bottom: 4.375rem;
+}
 .modulos__ico {
   text-align: center;
 }

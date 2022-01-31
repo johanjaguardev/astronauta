@@ -1,4 +1,17 @@
 .modulos {
+
+  &__grid {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: rem(20px);
+    justify-content: space-between;
+  }
+
+  &__item {
+    padding-bottom: rem(70px);
+  }
+
   &__ico {
     text-align: center;
   }
@@ -7,123 +20,123 @@
     color: $color__cyan;
   }
 
-    &__item {
-      &.pair {
+  &__item {
+    &.pair {
 
-      }
-      &.unpair {
-
-      }
+    }
+    &.unpair {
 
     }
 
-    &__svg {
+  }
+
+  &__svg {
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+    &-1 {
       align-items: center;
+      background-color: $color__purple-light;
+      border-radius: rem(45px);
+      cursor: pointer;
       display: flex;
-      flex-direction: column;
+      height: rem(200px);
       justify-content: center;
-
-      &-1 {
-        align-items: center;
-        background-color: $color__purple-light;
-        border-radius: rem(45px);
-        cursor: pointer;
-        display: flex;
-        height: rem(200px);
-        justify-content: center;
-        position: relative;
-        width: rem(200px);
-
-        svg {
-          width: rem(130px);
-        }
-
-        h3 {
-          bottom: rem(-60px);
-          font-size: rem(20px);
-          position: absolute;
-        }
-      }
-    }
-
-    &__title-1 {
-      color: $color__white;
-    }
-
-    &__2 {
-      background-color: rgba($color__purple-dark, 0.7);
-      display: none;
-
-      height: 100vh;
-      justify-content: center;
-      left: 0;
-      position: fixed;
-      top: 0;
-      width: 100vw;
-      z-index: 99;
-
-      &.open {
-        display: flex;
-      }
-
-      &-box {
-        background-color: rgba($color__purple-light, 0.9);
-        border-radius: rem(45px);
-        box-sizing: border-box;
-        display: flex;
-        flex-direction: column;
-        height: 90vh;
-        left: 5%;
-        padding: rem(48px);
-        position: absolute;
-        top: 5%;
-        width: 90vw;
-      }
+      position: relative;
+      width: rem(200px);
 
       svg {
         width: rem(130px);
       }
 
       h3 {
-        color: $color__cyan;
-        font-size: rem(64px);
-        margin: rem(20px) 0; 
-        text-align: center;
+        bottom: rem(-60px);
+        font-size: rem(20px);
+        position: absolute;
       }
+    }
+  }
 
-      &-row-1 {
-        display: flex;
-        flex-direction: row;
-      }
+  &__title-1 {
+    color: $color__white;
+  }
 
-      &-row-2 {
-        display: flex;
-        flex-direction: row;
-      }
-      
-      &-left {
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        width: 33%;
-      }
+  &__2 {
+    background-color: rgba($color__purple-dark, 0.7);
+    display: none;
 
+    height: 100vh;
+    justify-content: center;
+    left: 0;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 99;
+
+    &.open {
+      display: flex;
     }
 
-    &__img {
-      border-radius: rem(96px);
-      margin-left: rem(30px);
-      max-width: 75%;
-    }
-
-    &__content {
-      background-color: $color__white;
-      border-radius: 0 rem(96px) 0 0;
+    &-box {
+      background-color: rgba($color__purple-light, 0.9);
+      border-radius: rem(45px);
       box-sizing: border-box;
-      box-shadow: 5px 5px 15px 5px rgba($color__cyan, 0.5) ;
-      font-size: rem(24px);
-      margin: rem(-70px) 0 0 rem(30px);
-      padding: rem(24px);
-      width: 66%;
+      display: flex;
+      flex-direction: column;
+      height: 90vh;
+      left: 5%;
+      padding: rem(48px);
+      position: absolute;
+      top: 5%;
+      width: 90vw;
     }
+
+    svg {
+      width: rem(130px);
+    }
+
+    h3 {
+      color: $color__cyan;
+      font-size: rem(64px);
+      margin: rem(20px) 0; 
+      text-align: center;
+    }
+
+    &-row-1 {
+      display: flex;
+      flex-direction: row;
+    }
+
+    &-row-2 {
+      display: flex;
+      flex-direction: row;
+    }
+    
+    &-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      width: 33%;
+    }
+
+  }
+
+  &__img {
+    border-radius: rem(96px);
+    margin-left: rem(30px);
+    max-width: 75%;
+  }
+
+  &__content {
+    background-color: $color__white;
+    border-radius: 0 rem(96px) 0 0;
+    box-sizing: border-box;
+    box-shadow: 5px 5px 15px 5px rgba($color__cyan, 0.5) ;
+    font-size: rem(24px);
+    margin: rem(-70px) 0 0 rem(30px);
+    padding: rem(24px);
+    width: 66%;
+  }
 }
