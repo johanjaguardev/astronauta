@@ -39,22 +39,22 @@ $image= get_the_post_thumbnail_url( $page->ID );?>
       <h2><?php echo $title;?></h2>
       <div class="contacto__social-box">
         <?php if( strlen( $redes["facebook"] ) > 0 ):?>
-        <a href="https://www.facebook.com/<?php echo $redes["facebook"]?>" class="contacto__social contacto__facebook">
+        <a href="https://www.facebook.com/<?php echo $redes["facebook"]?>" class="contacto__social contacto__facebook" target="_blank">
           
         </a>
         <?php endif;?>
         <?php if( strlen( $redes["twitter"] ) > 0 ):?>
-        <a href="https://www.twitter.com/<?php echo $redes["twitter"]?>" class="contacto__social contacto__twitter">
+        <a href="https://www.twitter.com/<?php echo $redes["twitter"]?>" class="contacto__social contacto__twitter" target="_blank">
           
         </a>
         <?php endif;?>
         <?php if( strlen( $redes["linkedin"] ) > 0 ):?>
-        <a href="https://www.linkedin.com/in/<?php echo $redes["linkedin"]?>" class="contacto__social contacto__linkedin">
+        <a href="https://www.linkedin.com/in/<?php echo $redes["linkedin"]?>" class="contacto__social contacto__linkedin" target="_blank">
           
         </a>
         <?php endif;?>
         <?php if( strlen( $redes["instagram"] ) > 0 ):?>
-        <a href="https://www.instagram.com/<?php echo $redes["instagram"]?>" class="contacto__social contacto__instagram">
+        <a href="https://www.instagram.com/<?php echo $redes["instagram"]?>" class="contacto__social contacto__instagram" target="_blank">
           
         </a>
         <?php endif;?>
@@ -62,17 +62,17 @@ $image= get_the_post_thumbnail_url( $page->ID );?>
       <div class="contacto__datos-box">
         <ul class="contacto__datos-ul">
           <?php if( strlen( $redes["email"] ) > 0 ):?>
-          <li><a href="mailto:<?php echo $redes["email"]?>" class="contacto__datos contacto__email">
+          <li><a href="mailto:<?php echo $redes["email"]?>" class="contacto__datos contacto__email" target="_blank">
             <?php echo $redes["email"]?>
           </a></li>
           <?php endif;?>
           <?php if( strlen( $redes["direccion"] ) > 0 ):?>
-          <li><a href="#" class="contacto__datos contacto__direccion">
+          <li><a href="#" class="contacto__datos contacto__direccion" target="_blank">
             <?php echo $redes["direccion"]?>
           </a></li>
           <?php endif;?>
           <?php if( strlen( $redes["telefono"] ) > 0 ):?>
-          <li><a href="mailto:<?php echo $redes["telefono"]?>" class="contacto__datos contacto__telefono">
+          <li><a href="tel:<?php echo $redes["telefono"]?>" class="contacto__datos contacto__telefono" target="_blank">
             <?php echo $redes["telefono"]?>
           </a></li>
           <?php endif;?>
