@@ -8,7 +8,11 @@ get_header();?>
   'columns' => 2,
   'imageBg' => false
 ));?>
-<?php //get_template_part( $tpPath.'specific-page', null, array( 'page' => 'hero'));?>
+<?php get_template_part( $tpPath.'specific-page', null, array(
+  'page' => 'hero',
+  'columns' => 2,
+  'imageBg' => true
+));?>
 
 
 <?php //get_template_part( $tpPath.'specific-page', null, array( 'page' => 'home'));?>

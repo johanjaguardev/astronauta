@@ -31,7 +31,7 @@ SCREEN SIZES
 body {
   background-image: url(images/bg.jpg);
   background-repeat: no-repeat;
-  background-size: contain;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   font-family: "Maven Pro", sans-serif;
@@ -43,7 +43,6 @@ body {
 @media screen and (max-width: 768px) {
   body {
     background-position: top left;
-    background-size: cover;
   }
 }
 
@@ -66,6 +65,11 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
+.page__image-bg {
+  background-position: top left;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
 .page__left, .page__right {
   width: 50%;
 }
@@ -75,9 +79,19 @@ body {
     width: 100%;
   }
 }
-.page__img img {
+.page__img {
   height: auto;
   max-width: 100%;
+}
+.page h2 {
+  color: white;
+  font-size: 4.5rem;
+}
+.page__content p {
+  color: white;
+  font-size: 1.5rem;
+  font-weight: 100;
+  line-height: 1.5;
 }
 
 .btn {
@@ -226,6 +240,19 @@ body {
   .home__page-link {
     margin: 0 1.25rem;
   }
+}
+
+.hero__container {
+  flex-direction: row-reverse;
+}
+.hero__page {
+  margin-top: -12.5rem;
+  padding: 18.75rem 0 7.5rem 0;
+  position: relative;
+  z-index: 3;
+}
+.hero__page-image-bg {
+  background-position: -18.75rem 0;
 }
 
 body {

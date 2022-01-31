@@ -1,0 +1,16 @@
+.hero {
+  &__container {
+    flex-direction: row-reverse;
+  }
+
+  &__page {
+    margin-top: rem(-200px);
+    padding: rem(300px) 0 rem(120px) 0;
+    position: relative;
+    z-index: 3;
+
+    &-image-bg {
+      background-position: rem(-300px) 0;
+    }
+  }
+}
