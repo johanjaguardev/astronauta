@@ -33,8 +33,9 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import 'partials/widgets';
 @import 'partials/wp-defaults';
 @import 'partials/utilities';
-@import 'partials/home-page';
-@import 'partials/hero-page';
+@import 'partials/page-home';
+@import 'partials/page-hero';
+@import 'partials/page-objetivos';
 
 body { 
 	background-color: white; 

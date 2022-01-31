@@ -13,11 +13,11 @@ get_header();?>
   'columns' => 2,
   'imageBg' => true
 ));?>
-
+<?php get_template_part( $tpPath.'objetivos', null);?>
 
 <?php //get_template_part( $tpPath.'specific-page', null, array( 'page' => 'home'));?>
 
 <?php //get_template_part( $tpPath.'sample-entries', null, array( 'category' => 'sample'));?>
 
-<?php get_template_part( $tpPath.'sample-siema', null);?>
+<?php //get_template_part( $tpPath.'sample-siema', null);?>
 <?php get_footer();?> 

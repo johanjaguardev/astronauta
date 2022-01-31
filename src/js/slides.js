@@ -1,27 +1,42 @@
-const initSiema = (selector) => {
-  const mySiema = new Siema({
-    selector: `.${selector}`,
-    duration: 200,
-    easing: 'ease-out',
-    perPage: 1, 
-    startIndex: 0,
-    draggable: true,
-    multipleDrag: true,
-    threshold: 20,
-    loop: false,
-    rtl: false,
-    onInit: () => {},
-    onChange: () => {},
-  })
-  document.querySelector(`.${selector}__side.prev`).addEventListener('click', () => mySiema.prev())
-  document.querySelector(`.${selector}__side.next`).addEventListener('click', () => mySiema.next())
-
-  document.querySelectorAll(`.${selector}__dot`).forEach((dot) => {
-    const number = dot.getAttribute('data-number')
-    dot.addEventListener('click', () => {
-      mySiema.goTo(number)
+const initSiema = (selector, perPage) => {
+  if( document.querySelector(`.${selector}-siema`) ) {
+    const siema = new Siema({
+      selector: `.${selector}-siema`,
+      duration: 200,
+      easing: 'ease-out',
+      perPage: perPage, 
+      startIndex: 0,
+      draggable: true,
+      multipleDrag: true,
+      threshold: 20,
+      loop: true,
+      rtl: false,
+      onInit: () => {},
+      onChange: () => {},
     })
-  })
+
+    if ( document.querySelector(`.${selector}-siema__side.siema__prev`) ) {
+      document.querySelector(`.${selector}-siema__side.siema__prev`).addEventListener('click', () => {
+        siema.prev()
+      })
+    }
+
+    if( document.querySelector(`.${selector}-siema__side.siema__next`) ) {
+      document.querySelector(`.${selector}-siema__side.siema__next`).addEventListener('click', () => {
+        siema.next()
+      })
+    }
+    
+    if ( document.querySelectorAll(`.${selector}-siema__dot`) ) {
+      document.querySelectorAll(`.${selector}-siema__dot`).forEach((dot) => {
+        const number = dot.getAttribute('data-number')
+        dot.addEventListener('click', () => {
+          siema.goTo(number)
+        })
+      })
+    }
+  }
 }
-initSiema('siema')
+initSiema('test', 3)
+initSiema('objetivos', 2)
 

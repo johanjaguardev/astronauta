@@ -19,9 +19,9 @@ $image= get_the_post_thumbnail_url( $page->ID );
 /** * If imageBg is true, the post thumbails */
 
 if($imageBg):?>
-<div class="<?php echo $slug;?>__page page page__image-bg <?php echo $slug;?>__page-image-bg" style="background-image: url(<?php echo $image;?>)">
+<div class="<?php echo $slug;?> <?php echo $slug;?>__page page page__image-bg <?php echo $slug;?>__page-image-bg" style="background-image: url(<?php echo $image;?>)">
 <?php else:?>
-<div class="<?php echo $slug;?>__page page">
+<div class="<?php echo $slug;?> <?php echo $slug;?>__page page">
 <?php endif;?>
 
   <div class="<?php echo $slug;?>__container container">

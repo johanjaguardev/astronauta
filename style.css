@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 7.5rem 0;
 }
 .page__image-bg {
   background-position: top left;
@@ -78,6 +79,15 @@ body {
     justify-content: space-between;
     width: 100%;
   }
+}
+.page__center {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.page__center h2 {
+  text-align: center;
 }
 .page__img {
   height: auto;
@@ -113,6 +123,49 @@ body {
     font-size: 1.5rem;
     padding: 0.5rem 1rem;
   }
+}
+
+.siema__side {
+  align-items: center;
+  background-color: #171b3f;
+  border-radius: 50%;
+  color: white;
+  cursor: pointer;
+  display: flex;
+  font-size: 2rem;
+  font-weight: 600;
+  height: 2.5rem;
+  justify-content: center;
+  width: 2.5rem;
+}
+.siema__sides {
+  display: flex;
+  justify-content: space-between;
+  left: 50%;
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  width: 96%;
+}
+.siema__dots {
+  display: flex;
+  justify-content: center;
+  margin: 1.875rem 0;
+  width: 100%;
+}
+.siema__dot {
+  background-color: white;
+  border: 2px solid #171b3f;
+  border-radius: 50%;
+  color: transparent;
+  cursor: pointer;
+  height: 20px;
+  margin: 0 0.3125rem;
+  transition: 0.8s ease-in-out all;
+  width: 20px;
+}
+.siema__dot:hover {
+  background-color: #171b3f;
 }
 
 .header {
@@ -270,6 +323,69 @@ body {
     background-position: 0rem 0rem;
     background-size: contain;
   }
+}
+
+.objetivos {
+  background-color: white;
+}
+.objetivos h2 {
+  color: #171b3f;
+}
+.objetivos__carousel {
+  position: relative;
+}
+.objetivos__page-figure {
+  padding: 0 3.75rem;
+}
+.objetivos-siema {
+  margin-left: 6.5%;
+  max-width: 87%;
+}
+.objetivos-siema__item {
+  align-items: center;
+  border-radius: 1.875rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  margin: 0 0.9375rem;
+}
+.objetivos-siema__item h3 {
+  font-size: 1.5rem;
+}
+.objetivos-siema__item p {
+  font-size: 0.875rem;
+  line-height: 1.3;
+}
+.objetivos-siema__item.unpair {
+  background-color: #171b3f;
+}
+.objetivos-siema__item.unpair h3 {
+  color: #1ce6ea;
+}
+.objetivos-siema__item.unpair p {
+  color: white;
+}
+.objetivos-siema__item.pair {
+  background-color: #1ce6ea;
+}
+.objetivos-siema__item.pair h3 {
+  color: #171b3f;
+}
+.objetivos-siema__item.pair p {
+  color: #171b3f;
+}
+.objetivos-siema__number {
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  color: #171b3f;
+  display: flex;
+  font-size: 6rem;
+  font-weight: 600;
+  height: 6.5625rem;
+  justify-content: center;
+  margin: 0 1.875rem 0 1.25rem;
+  width: 5.625rem;
 }
 
 body {
