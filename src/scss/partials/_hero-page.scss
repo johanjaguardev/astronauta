@@ -1,6 +1,10 @@
 .hero {
   &__container {
     flex-direction: row-reverse;
+
+    @media screen and (max-width: $screen__M) {
+      flex-direction: column;
+    }
   }
 
   &__page {
@@ -9,8 +13,18 @@
     position: relative;
     z-index: 3;
 
+    @media screen and (max-width: $screen__M) {
+      margin-top: 0;
+      padding: rem(50px) 0 rem(50px) 0;
+    }
+
     &-image-bg {
       background-position: rem(-300px) 0;
+
+      @media screen and (max-width: $screen__M) {
+        background-position: rem(0px) rem(0px);
+        background-size: contain;
+      }
     }
   }
 }

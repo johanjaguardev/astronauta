@@ -245,14 +245,31 @@ body {
 .hero__container {
   flex-direction: row-reverse;
 }
+@media screen and (max-width: 768px) {
+  .hero__container {
+    flex-direction: column;
+  }
+}
 .hero__page {
   margin-top: -12.5rem;
   padding: 18.75rem 0 7.5rem 0;
   position: relative;
   z-index: 3;
 }
+@media screen and (max-width: 768px) {
+  .hero__page {
+    margin-top: 0;
+    padding: 3.125rem 0 3.125rem 0;
+  }
+}
 .hero__page-image-bg {
   background-position: -18.75rem 0;
+}
+@media screen and (max-width: 768px) {
+  .hero__page-image-bg {
+    background-position: 0rem 0rem;
+    background-size: contain;
+  }
 }
 
 body {
