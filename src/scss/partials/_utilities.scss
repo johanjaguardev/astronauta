@@ -1,0 +1,25 @@
+.hamburguer {
+  cursor: pointer;
+  &__stick {
+    background-color: $color__white;
+    border-radius: rem(3px);
+    height: rem(10px);
+    margin: rem(10px) auto;
+    transition: 1s ease-in-out all;
+    width: rem(64px);
+  }
+
+  &.open {
+    .hamburguer__stick {
+      &-1 {
+        transform: rotate(45deg) translate((14px), (14px));
+      }
+      &-3 {
+        transform: rotate(-45deg) translate((14px), (-14px));
+      }
+      &-2 {
+        opacity: 0;
+      }
+    }
+  }
+}

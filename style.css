@@ -71,6 +71,27 @@ body {
   text-decoration: none;
 }
 
+.hamburguer {
+  cursor: pointer;
+}
+.hamburguer__stick {
+  background-color: white;
+  border-radius: 0.1875rem;
+  height: 0.625rem;
+  margin: 0.625rem auto;
+  transition: 1s ease-in-out all;
+  width: 4rem;
+}
+.hamburguer.open .hamburguer__stick-1 {
+  transform: rotate(45deg) translate(14px, 14px);
+}
+.hamburguer.open .hamburguer__stick-3 {
+  transform: rotate(-45deg) translate(14px, -14px);
+}
+.hamburguer.open .hamburguer__stick-2 {
+  opacity: 0;
+}
+
 body {
   background-color: white;
   color: black;
