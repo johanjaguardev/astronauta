@@ -27,7 +27,6 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import 'partials/mixins';
 @import 'partials/base';
 @import 'partials/header';
-@import 'partials/modules';
 @import 'partials/footer';
 @import 'partials/comments';
 @import 'partials/widgets';
@@ -36,6 +35,8 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 @import 'partials/page-home';
 @import 'partials/page-hero';
 @import 'partials/page-objetivos';
+@import 'partials/page-modules';
+@import 'partials/page-clientes';
 
 body { 
 	background-color: white; 

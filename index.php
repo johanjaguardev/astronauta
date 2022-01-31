@@ -2,7 +2,7 @@
 $tpPath = "src/template-parts/";
 $shortcodesPath = "src/shortcodes/";
 get_header();?>
-<!-- 
+
 <?php get_template_part( $tpPath.'specific-page', null, array(
   'page' => 'home',
   'columns' => 2,
@@ -13,8 +13,9 @@ get_header();?>
   'columns' => 2,
   'imageBg' => true
 ));?>
-<?php get_template_part( $tpPath.'objetivos', null);?> -->
+<?php get_template_part( $tpPath.'objetivos', null);?>
 <?php get_template_part( $tpPath.'modulos', null);?>
+<?php get_template_part( $tpPath.'clientes', null);?>
 
 <?php //get_template_part( $tpPath.'specific-page', null, array( 'page' => 'home'));?>
 
