@@ -1,0 +1,37 @@
+.home {
+  &__container {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  &__page {
+    margin-top: -90vh;
+    position: relative;
+    z-index: 2;
+
+    h2 {
+      display: none;
+    }
+
+    &-left, &-right {
+      width: 50%;
+    }
+
+    &-img {
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+
+    &-content {
+      color: $color__white;
+      font-size: rem(82px);
+
+      strong, b {
+        color: $color__cyan;
+        font-size: rem(64px);
+      }
+    }
+  }
+}
