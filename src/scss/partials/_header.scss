@@ -11,6 +11,10 @@
   transform: translateY(-92vh);
   z-index: 1;
 
+  @media screen and (max-width: $screen__M) {
+    padding: rem(20px) 0;
+  }
+
   &.open {
     align-items: center;
     background-color: lime;
