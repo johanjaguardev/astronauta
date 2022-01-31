@@ -2,6 +2,26 @@
   &__overlay {
     overflow-y: hidden;
   }
+
+  &__close {
+    align-items: center;
+    background-color: $color__white;
+    border-radius: 50%;
+    color: $color__purple-dark;
+    cursor: pointer;
+    display: flex;
+    font-size: rem(36px);
+    font-weight: 800;
+    justify-content: center;
+    height: rem(30px);
+    padding: rem(15px);
+    position: absolute;
+    right: rem(30px);
+    top: rem(30px);
+    width: 30px;
+    z-index: 9999;
+  }
+
   &__grid {
     display: flex;
     flex-direction: row;

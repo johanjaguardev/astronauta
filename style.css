@@ -227,6 +227,24 @@ body {
 .modulos__overlay {
   overflow-y: hidden;
 }
+.modulos__close {
+  align-items: center;
+  background-color: white;
+  border-radius: 50%;
+  color: #171b3f;
+  cursor: pointer;
+  display: flex;
+  font-size: 2.25rem;
+  font-weight: 800;
+  justify-content: center;
+  height: 1.875rem;
+  padding: 0.9375rem;
+  position: absolute;
+  right: 1.875rem;
+  top: 1.875rem;
+  width: 30px;
+  z-index: 9999;
+}
 .modulos__grid {
   display: flex;
   flex-direction: row;
