@@ -19,5 +19,5 @@ get_header();?>
 
 <?php //get_template_part( $tpPath.'sample-entries', null, array( 'category' => 'sample'));?>
 
-<?php get_template_part( $tpPath.'sample-siema', null);?>
+<?php //get_template_part( $tpPath.'sample-siema', null);?>
 <?php get_footer();?> 
