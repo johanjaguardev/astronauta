@@ -1,0 +1,67 @@
+.home {
+  &__container {
+    flex-direction: row;
+    justify-content: center;
+
+    @media screen and (max-width: $screen__M) {
+      flex-direction: column-reverse;
+    }
+  }
+
+  &__page {
+    margin-top: -90vh;
+    position: relative;
+    z-index: 2;
+
+    h2 {
+      display: none;
+    }
+
+    &-left, &-right {
+      width: 50%;
+
+      @media screen and (max-width: $screen__M) {
+        justify-content: space-between;
+        width: 100%;
+      }
+    }
+
+    &-img {
+      img {
+        height: auto;
+        max-width: 100%;
+      }
+    }
+
+    &-content {
+      color: $color__white;
+      font-size: rem(82px);
+
+      strong, b {
+        color: $color__cyan;
+        font-size: rem(64px);
+      }
+
+      @media screen and (max-width: $screen__M) {
+        font-size: rem(42px);
+        strong, b {
+          font-size: rem(36px);
+        }
+        p {
+          margin: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: $screen__M) {
+      &-left {
+        display: flex;
+        flex-direction: row;
+      }
+
+      &-link {
+        margin: 0 rem(20px);
+      }
+    }
+  }
+}

@@ -11,7 +11,7 @@
           <?php the_custom_logo()?>
         </div>
         <nav class="header__nav">
-          <?php if(!wp_is_mobile()):?>
+          <?php if(wp_is_mobile()):?>
           <div class="header__hamburguer hamburguer">
             <div class="hamburguer__stick-1 hamburguer__stick"></div>
             <div class="hamburguer__stick-2 hamburguer__stick"></div>
