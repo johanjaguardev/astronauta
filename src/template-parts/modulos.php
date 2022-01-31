@@ -24,7 +24,9 @@ $conteo = 0;
 <div class="modulos modulos__page page" style="background-image: url(<?php echo $image;?>)">
   <div class="modulos__container container">
     <div class="modulos__page-center page__center">
-      <?php echo $content;?>  
+      <div class="modulos__ico">
+        <?php echo $content;?>
+      </div>   
       <h2><?php echo $title;?></h2>
     </div>
     <div class="modulos__carousel">
@@ -43,29 +45,32 @@ $conteo = 0;
           <div class="modulos-siema__1">
             <div class="modulos-siema__svg modulos-siema__svg-1">
               <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+              <h3 class="modulos-siema__title-1"><?php the_title();?></h3>
             </div>
-            <h3 class="modulos-siema__title-1"><?php the_title();?></h3>
           </div>
-          <div class="modulos-siema__2">
-            <div class="modulos-siema__2-row-1">
-              <div class="modulos-siema__2-left">
-                <div class="modulos-siema__svg modulos-siema__svg-2">
-                  <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+          <div class="modulos-siema__2" style="background-image: url(<?php echo $image;?>)">
+            <div class="modulos-siema__2-box">
+              <div class="modulos-siema__2-row-1">
+                <div class="modulos-siema__2-left">
+                  <div class="modulos-siema__svg modulos-siema__svg-2">
+                    <?php echo get_post_meta( $post->ID, 'svg', TRUE);?>
+                  </div>
+                  <h3 class="modulos-siema__title-2"><?php the_title(); ?></h3>
                 </div>
-                <h3 class="modulos-siema__title-2"><?php the_title(); ?></h3>
+                <div class="modulos-siema__2-right">
+                  <figure class="modulos-siema__figure">
+                    <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos-siema__img"/>  
+                  </figure>
+                </div>
               </div>
-              <div class="modulos-siema__2-right">
-                <figure class="modulos-siema__figure">
-                  <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="modulos-siema__img"/>  
-                </figure>
+              <div class="modulos-siema__2-row-2">
+                <div class="modulos-siema__content">
+                  <?php the_excerpt(); ?>
+                  <a href="<?php the_permalink(); ?>">...</a>
+                </div>
               </div>
             </div>
-            <div class="modulos-siema__2-row-2">
-              <div class="modulos-siema__content">
-                <?php the_excerpt(); ?>
-                <a href="<?php the_permalink(); ?>">...</a>
-              </div>
-            </div>
+
           </div>
         </article>
     <?php endwhile;
