@@ -29,14 +29,9 @@ $image= get_the_post_thumbnail_url( $page->ID );?>
   <div class="<?php echo $slug;?>__container container">
     <div class="<?php echo $slug;?>__page-left page__left">
       <?php echo do_shortcode("[ninja_form id=".$redes["form"]."]"); ?>
-
-
-      <div class="<?php echo $slug;?>__page-content page__content">
-        <?php echo $content;?>
-      </div>
     </div>
     <div class="<?php echo $slug;?>__page-right page__right">
-      <h2><?php echo $title;?></h2>
+      <h2 class="contacto__title-redes">Siguenos en redes</h2>
       <div class="contacto__social-box">
         <?php if( strlen( $redes["facebook"] ) > 0 ):?>
         <a href="https://www.facebook.com/<?php echo $redes["facebook"]?>" class="contacto__social contacto__facebook" target="_blank">
@@ -59,20 +54,22 @@ $image= get_the_post_thumbnail_url( $page->ID );?>
         </a>
         <?php endif;?>
       </div>
+
+      <h2 class="contacto__title"><?php echo $title;?></h2>
       <div class="contacto__datos-box">
         <ul class="contacto__datos-ul">
           <?php if( strlen( $redes["email"] ) > 0 ):?>
-          <li><a href="mailto:<?php echo $redes["email"]?>" class="contacto__datos contacto__email" target="_blank">
+          <li class="contacto__datos-li"><a href="mailto:<?php echo $redes["email"]?>" class="contacto__datos contacto__email" target="_blank">
             <?php echo $redes["email"]?>
           </a></li>
           <?php endif;?>
           <?php if( strlen( $redes["direccion"] ) > 0 ):?>
-          <li><a href="#" class="contacto__datos contacto__direccion" target="_blank">
+          <li class="contacto__datos-li"><a href="#" class="contacto__datos contacto__direccion" target="_blank">
             <?php echo $redes["direccion"]?>
           </a></li>
           <?php endif;?>
           <?php if( strlen( $redes["telefono"] ) > 0 ):?>
-          <li><a href="tel:<?php echo $redes["telefono"]?>" class="contacto__datos contacto__telefono" target="_blank">
+          <li class="contacto__datos-li"><a href="tel:<?php echo $redes["telefono"]?>" class="contacto__datos contacto__telefono" target="_blank">
             <?php echo $redes["telefono"]?>
           </a></li>
           <?php endif;?>

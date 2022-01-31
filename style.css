@@ -578,6 +578,67 @@ body {
 .contacto .nf-form-fields-required {
   display: none;
 }
+.contacto h2 {
+  color: #1ce6ea;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: left;
+}
+.contacto__social {
+  background-image: url(images/redes.png);
+  display: block;
+  height: 40px;
+  transform: scale(0.8);
+  width: 40px;
+}
+.contacto__social-box {
+  display: flex;
+  flex-direction: row;
+  gap: 0 20px;
+  padding-bottom: 3.125rem;
+}
+.contacto__twitter {
+  height: 66px;
+  width: 82px;
+}
+.contacto__facebook {
+  height: 66px;
+  width: 32px;
+  background-position-x: 50px;
+}
+.contacto__linkedin {
+  height: 66px;
+  width: 68px;
+  background-position-x: 183px;
+}
+.contacto__instagram {
+  height: 66px;
+  width: 64px;
+  background-position-x: 115px;
+}
+.contacto__datos-ul {
+  list-style: none;
+}
+.contacto__datos-li {
+  padding: 0.3125rem 0;
+  position: relative;
+}
+.contacto__datos-li a {
+  color: white;
+  font-size: 1.375rem;
+  text-decoration: none;
+}
+.contacto__datos-li::before {
+  background-image: url(images/redes.png);
+  background-position-x: 17px;
+  content: "";
+  display: block;
+  height: 29px;
+  left: -1.875rem;
+  position: absolute;
+  transform: scale(0.8);
+  width: 19px;
+}
 
 body {
   background-color: white;
