@@ -1,13 +1,13 @@
 <?php
 
-/** * Completely Remove jQuery From WordPress */
-function removeJQuery() {
-  if (!is_admin()) {
-      wp_deregister_script('jquery');
-      wp_register_script('jquery', false);
-  }
-}
-add_action('init', 'removeJQuery');
+// /** * Completely Remove jQuery From WordPress */
+// function removeJQuery() {
+//   if (!is_admin()) {
+//       wp_deregister_script('jquery');
+//       wp_register_script('jquery', false);
+//   }
+// }
+// add_action('init', 'removeJQuery');
 
 /** * Enable custom logo from admin */
 add_theme_support( 'custom-logo');
