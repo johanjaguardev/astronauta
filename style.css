@@ -64,6 +64,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
+  padding: 7.5rem 0;
 }
 .page__image-bg {
   background-position: top left;
@@ -78,6 +79,15 @@ body {
     justify-content: space-between;
     width: 100%;
   }
+}
+.page__center {
+  align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+}
+.page__center h2 {
+  text-align: center;
 }
 .page__img {
   height: auto;
@@ -270,6 +280,13 @@ body {
     background-position: 0rem 0rem;
     background-size: contain;
   }
+}
+
+.objetivos {
+  background-color: white;
+}
+.objetivos h2 {
+  color: #171b3f;
 }
 
 body {
