@@ -1,0 +1,130 @@
+.contacto {
+  &__container {
+    display: flex;
+    flex-direction: row;
+  }
+
+  &__page {
+    &-left {
+      background-color: $color__white;
+      border-radius: rem(40px);
+      box-sizing: border-box;
+      padding: rem(40px);
+      margin-right: rem(50px);
+
+      h3 {
+        color: $color__purple-dark;
+        font-size: rem(48px);
+        font-weight: 600;
+        text-align: center;
+      }
+    }
+  }
+
+  .nf-element {
+    border-color: $color__purple-light!important;
+    border-radius: rem(25px)!important;
+
+    &::placeholder {
+      color: $color__purple-dark!important;
+      font-family: $font__main;
+      font-size: rem(20px)!important;
+      font-weight: 400;
+    }
+
+    &[type="button"] {
+      align-items: center;
+      align-self: center;
+      background-color: $color__purple-dark;
+      border-radius: rem(16px) !important;
+      color: $color__white;
+      display: flex;
+      font-family: $font__main;
+      font-size: rem(24px) !important;
+      font-weight: 600;
+      justify-content: center;
+      margin: 0 auto;
+      padding: rem(4px) rem(24px);
+      text-decoration: none;
+      width: rem(200px);
+    }
+  }
+
+  .nf-form-fields-required {
+    display: none;
+  }
+
+  h2 {
+    color: $color__cyan;
+    font-size: rem(48px);
+    font-weight: 600;
+    text-align: left;
+  }
+
+  &__social {
+    background-image: url(images/redes.png);
+    display: block;
+    height: 40px;
+    transform: scale(0.8);
+    width: 40px;
+
+    &-box {
+      display: flex;
+      flex-direction: row;
+      gap: 0 20px;
+      padding-bottom: rem(50px);
+    }
+  }
+
+  &__twitter {
+    height: 66px;
+    width: 82px;
+  }
+
+  &__facebook {
+    height: 66px;
+    width: 32px;
+    background-position-x: 50px;  
+  }
+
+  &__linkedin {
+    height: 66px;
+    width: 68px;
+    background-position-x: 183px;
+  }
+
+  &__instagram {
+    height: 66px;
+    width: 64px;
+    background-position-x: 115px;
+  }
+
+  &__datos {
+    &-ul {
+      list-style: none;
+    }
+
+    &-li {
+      padding: rem(5px) 0;
+      position: relative;
+
+      a {
+        color: $color__white;
+        font-size: rem(22px);
+        text-decoration: none;
+      }
+
+      &::before {
+        background-image: url(images/redes.png);
+        background-position-x: 17px;
+        content: "";
+        display: block;
+        height: 29px;
+        left: -1.875rem;
+        position: absolute;
+        transform: scale(0.8);
+        width: 19px;
+      }
+    }
+  }
+}

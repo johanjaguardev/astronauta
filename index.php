@@ -17,6 +17,8 @@ get_header();?>
 <?php get_template_part( $tpPath.'modulos', null);?>
 <?php get_template_part( $tpPath.'clientes', null);?>
 
+<?php get_template_part( $tpPath.'contacto', null);?>
+
 <?php //get_template_part( $tpPath.'specific-page', null, array( 'page' => 'home'));?>
 
 <?php //get_template_part( $tpPath.'sample-entries', null, array( 'category' => 'sample'));?>
