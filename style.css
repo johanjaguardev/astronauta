@@ -29,7 +29,7 @@ Large (1008px and larger)
 SCREEN SIZES
 */
 body {
-  background-image: url(images/bg.png);
+  background-image: url(images/bg.jpg);
   background-repeat: no-repeat;
   background-size: contain;
   display: flex;
@@ -66,6 +66,19 @@ body {
   flex-direction: column;
   justify-content: flex-start;
 }
+.page__left, .page__right {
+  width: 50%;
+}
+@media screen and (max-width: 768px) {
+  .page__left, .page__right {
+    justify-content: space-between;
+    width: 100%;
+  }
+}
+.page__img img {
+  height: auto;
+  max-width: 100%;
+}
 
 .btn {
   align-items: center;
@@ -75,9 +88,11 @@ body {
   display: flex;
   font-size: 2rem;
   font-weight: 800;
+  height: 2.5rem;
   justify-content: center;
   padding: 0.5rem 1.5rem;
   text-decoration: none;
+  width: 12.5rem;
 }
 @media screen and (max-width: 768px) {
   .btn {
@@ -183,19 +198,6 @@ body {
 }
 .home__page h2 {
   display: none;
-}
-.home__page-left, .home__page-right {
-  width: 50%;
-}
-@media screen and (max-width: 768px) {
-  .home__page-left, .home__page-right {
-    justify-content: space-between;
-    width: 100%;
-  }
-}
-.home__page-img img {
-  height: auto;
-  max-width: 100%;
 }
 .home__page-content {
   color: white;
