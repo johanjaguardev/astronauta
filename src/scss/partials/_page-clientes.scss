@@ -1,0 +1,15 @@
+.clientes {
+  background-color: $color__white;
+
+  h2 {
+    color: $color__purple-dark;
+  }
+
+  &__carousel {
+    position: relative;
+  }
+
+  &__img {
+    max-width: 100%;
+  }
+}
