@@ -28,6 +28,9 @@
     flex-wrap: wrap;
     gap: rem(105px);
     justify-content: space-evenly;
+    @media screen and (max-width: $screen__L) {
+      gap: rem(10px);
+    }
   }
 
   &__item {
@@ -74,9 +77,11 @@
       }
 
       h3 {
-        bottom: rem(-60px);
+        bottom: rem(-90px);
         font-size: rem(20px);
+        height: rem(50px);
         position: absolute;
+        text-align: center;
       }
     }
   }
@@ -88,7 +93,6 @@
   &__2 {
     background-color: rgba($color__purple-dark, 0.7);
     display: none;
-
     height: 100vh;
     justify-content: center;
     left: 0;
@@ -113,6 +117,10 @@
       position: absolute;
       top: 5%;
       width: 90vw;
+
+      @media screen and (max-width: $screen__M) {
+        padding: rem(10px);
+      }
     }
 
     svg {
@@ -121,7 +129,7 @@
 
     h3 {
       color: $color__cyan;
-      font-size: rem(64px);
+      font-size: rem(50px);
       margin: rem(20px) 0; 
       text-align: center;
     }
@@ -129,6 +137,10 @@
     &-row-1 {
       display: flex;
       flex-direction: row;
+
+      @media screen and (max-width: $screen__M) {
+        flex-direction: column;
+      }
     }
 
     &-row-2 {
@@ -141,6 +153,10 @@
       flex-direction: column;
       justify-content: center;
       width: 33%;
+
+      @media screen and (max-width: $screen__M) {
+        width: 100%;
+      }
     }
 
   }
@@ -148,7 +164,13 @@
   &__img {
     border-radius: rem(96px);
     margin-left: rem(30px);
-    max-width: 75%;
+    min-height: rem(200px);
+    max-height: (380px);
+    max-width: 100%;
+
+    @media screen and (max-width: $screen__M) {
+      margin-left: 0;
+    }
   }
 
   &__content {
@@ -157,8 +179,16 @@
     box-sizing: border-box;
     box-shadow: 5px 5px 15px 5px rgba($color__cyan, 0.5) ;
     font-size: rem(24px);
-    margin: rem(-70px) 0 0 rem(30px);
+    margin: rem(-10px) 0 0 rem(30px);
     padding: rem(24px);
     width: 66%;
+
+    @media screen and (max-width: $screen__M) {
+      font-size: rem(18px);
+      width: 100%;
+      margin: 0;
+      padding: 10px;
+      border-radius: 20px;
+    }
   }
 }

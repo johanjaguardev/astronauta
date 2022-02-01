@@ -13,6 +13,10 @@
     position: relative;
     z-index: 3;
 
+    @media screen and (max-width: $screen__L) {
+      padding: rem(250px) 0 rem(50px) 0;
+    }
+
     @media screen and (max-width: $screen__M) {
       margin-top: 0;
       padding: rem(50px) 0 rem(50px) 0;
@@ -22,10 +26,25 @@
       background-position: rem(-50px) rem(150px);
       background-size: 70%;
 
+      @media screen and (max-width: $screen__L) {
+        background-position: rem(0px) rem(400px);
+      }
+
       @media screen and (max-width: $screen__M) {
         background-position: rem(0px) rem(0px);
         background-size: contain;
       }
+    }
+  }
+
+  h2 {
+
+    @media screen and (max-width: $screen__L) {
+      margin: rem(0px) 0 0 0;
+    }
+    @media screen and (max-width: $screen__M) {
+      margin: rem(250px) 0 0 0;
+      padding: 0;
     }
   }
 }

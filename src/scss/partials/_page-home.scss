@@ -3,15 +3,19 @@
     flex-direction: row;
     justify-content: center;
 
-    @media screen and (max-width: $screen__M) {
+    @media screen and (max-width: $screen__L) {
       flex-direction: column-reverse;
     }
   }
 
   &__page {
-    margin-top: -90vh;
+    margin-top: -106vh;
     position: relative;
     z-index: 2;
+    
+    @media screen and (max-width: $screen__M) {
+      margin-top: -90vh;
+    }
 
     h2 {
       display: none;
@@ -45,10 +49,18 @@
       &-left {
         display: flex;
         flex-direction: row;
+
+        @media screen and (max-width: $screen__M) {
+          flex-direction: column;
+        }
       }
 
       &-link {
         margin: 0 rem(20px);
+
+        @media screen and (max-width: $screen__M) {
+          margin: rem(40px) rem(20px);
+        }
       }
     }
   }
