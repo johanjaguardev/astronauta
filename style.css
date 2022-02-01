@@ -351,9 +351,21 @@ body {
 .objetivos__page-figure {
   padding: 0 3.75rem;
 }
+@media screen and (max-width: 768px) {
+  .objetivos__page-figure {
+    margin: 0.625rem;
+    padding: 0;
+  }
+}
 .objetivos-siema {
   margin-left: 6.5%;
   max-width: 87%;
+}
+@media screen and (max-width: 768px) {
+  .objetivos-siema {
+    margin-left: 0;
+    max-width: 100%;
+  }
 }
 .objetivos-siema__item {
   align-items: center;
@@ -362,6 +374,11 @@ body {
   flex-direction: row;
   justify-content: center;
   margin: 0 0.9375rem;
+}
+@media screen and (max-width: 768px) {
+  .objetivos-siema__item {
+    flex-direction: column;
+  }
 }
 .objetivos-siema__item h3 {
   font-size: 1.5rem;
