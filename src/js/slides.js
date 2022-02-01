@@ -39,5 +39,5 @@ const initSiema = (selector, perPage) => {
 }
 initSiema('test', 3)
 initSiema('objetivos', 2)
-initSiema('clientes', 6)
+initSiema('clientes', 2) 
 

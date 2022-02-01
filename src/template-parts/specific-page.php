@@ -23,7 +23,7 @@ if($imageBg):?>
 <?php else:?>
 <div class="<?php echo $slug;?> <?php echo $slug;?>__page page">
 <?php endif;?>
-
+  <a name="<?php echo $slug;?>"></a>
   <div class="<?php echo $slug;?>__container container">
     <div class="<?php echo $slug;?>__page-left page__left">
       <h2><?php echo $title;?></h2>

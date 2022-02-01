@@ -18,6 +18,7 @@ $conteo = 0;
 ?> 
 
 <div class="clientes clientes__page page">
+  <a name="clientes"></a>
   <div class="clientes__container container">
     <div class="clientes__page-center page__center">
       <h2><?php echo $title;?></h2>

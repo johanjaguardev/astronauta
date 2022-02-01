@@ -19,7 +19,11 @@
 
     &-content {
       color: $color__white;
-      font-size: rem(82px);
+
+      p {
+        font-size: rem(82px);
+        line-height: 1;
+      }
 
       strong, b {
         color: $color__cyan;

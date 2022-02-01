@@ -26,8 +26,8 @@
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    gap: rem(20px);
-    justify-content: space-between;
+    gap: rem(105px);
+    justify-content: space-evenly;
   }
 
   &__item {
