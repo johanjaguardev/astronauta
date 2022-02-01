@@ -11,6 +11,11 @@
     &-figure {
       padding: 0 rem(60px);
 
+      @media screen and (max-width: $screen__L) {
+        margin: rem(10px) 0;
+        padding: 0;
+      }
+
       @media screen and (max-width: $screen__M) {
         margin: rem(10px);
         padding: 0;
@@ -21,9 +26,20 @@
     margin-left: 6.5%;
     max-width: 87%;
 
+    @media screen and (max-width: $screen__L) {
+      margin-left: 0;
+      max-width: 100%;
+    }
+
     @media screen and (max-width: $screen__M) {
       margin-left: 0;
       max-width: 100%;
+    }
+
+    &__sides {
+      @media screen and (max-width: $screen__L) {
+        width: 110%;
+      }
     }
 
     &__item {

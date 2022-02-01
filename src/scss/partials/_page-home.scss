@@ -3,15 +3,19 @@
     flex-direction: row;
     justify-content: center;
 
-    @media screen and (max-width: $screen__M) {
+    @media screen and (max-width: $screen__L) {
       flex-direction: column-reverse;
     }
   }
 
   &__page {
-    margin-top: -90vh;
+    margin-top: -106vh;
     position: relative;
     z-index: 2;
+
+    @media screen and (max-width: $screen__L) {
+
+    }
 
     h2 {
       display: none;

@@ -80,7 +80,7 @@ body {
 .page__left, .page__right {
   width: 50%;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1366px) {
   .page__left, .page__right {
     justify-content: space-between;
     width: 100%;
@@ -300,13 +300,13 @@ body {
   flex-direction: row;
   justify-content: center;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1366px) {
   .home__container {
     flex-direction: column-reverse;
   }
 }
 .home__page {
-  margin-top: -90vh;
+  margin-top: -106vh;
   position: relative;
   z-index: 2;
 }
@@ -371,6 +371,11 @@ body {
   position: relative;
   z-index: 3;
 }
+@media screen and (max-width: 1366px) {
+  .hero__page {
+    padding: 15.625rem 0 3.125rem 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero__page {
     margin-top: 0;
@@ -381,6 +386,11 @@ body {
   background-position: -3.125rem 9.375rem;
   background-size: 70%;
 }
+@media screen and (max-width: 1366px) {
+  .hero__page-image-bg {
+    background-position: 0rem 25rem;
+  }
+}
 @media screen and (max-width: 768px) {
   .hero__page-image-bg {
     background-position: 0rem 0rem;
@@ -388,6 +398,11 @@ body {
   }
 }
 @media screen and (max-width: 1366px) {
+  .hero h2 {
+    margin: 0rem 0 0 0;
+  }
+}
+@media screen and (max-width: 768px) {
   .hero h2 {
     margin: 15.625rem 0 0 0;
     padding: 0;
@@ -406,6 +421,12 @@ body {
 .objetivos__page-figure {
   padding: 0 3.75rem;
 }
+@media screen and (max-width: 1366px) {
+  .objetivos__page-figure {
+    margin: 0.625rem 0;
+    padding: 0;
+  }
+}
 @media screen and (max-width: 768px) {
   .objetivos__page-figure {
     margin: 0.625rem;
@@ -416,10 +437,21 @@ body {
   margin-left: 6.5%;
   max-width: 87%;
 }
+@media screen and (max-width: 1366px) {
+  .objetivos-siema {
+    margin-left: 0;
+    max-width: 100%;
+  }
+}
 @media screen and (max-width: 768px) {
   .objetivos-siema {
     margin-left: 0;
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .objetivos-siema__sides {
+    width: 110%;
   }
 }
 .objetivos-siema__item {

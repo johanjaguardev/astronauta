@@ -47,7 +47,7 @@ body {
   &__left, &__right {
     width: 50%;
 
-    @media screen and (max-width: $screen__M) {
+    @media screen and (max-width: $screen__L) {
       justify-content: space-between;
       width: 100%;
     } 
