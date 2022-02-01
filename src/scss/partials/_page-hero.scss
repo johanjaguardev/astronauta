@@ -19,7 +19,8 @@
     }
 
     &-image-bg {
-      background-position: rem(-300px) 0;
+      background-position: rem(-50px) rem(150px);
+      background-size: 70%;
 
       @media screen and (max-width: $screen__M) {
         background-position: rem(0px) rem(0px);

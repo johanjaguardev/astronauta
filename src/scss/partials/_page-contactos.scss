@@ -49,7 +49,9 @@
       width: rem(200px);
     }
   }
-
+  .nf-field-label {
+    display: none!important;
+  }
   .nf-form-fields-required {
     display: none;
   }

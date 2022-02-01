@@ -19,6 +19,7 @@ $conteo = 0;
 ?> 
 
 <div class="objetivos objetivos__page page">
+  <a name="objetivos"></a>
   <div class="objetivos__container container">
     <div class="objetivos__page-center page__center">
       <h2><?php echo $title;?></h2>

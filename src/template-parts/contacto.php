@@ -26,6 +26,7 @@ $image= get_the_post_thumbnail_url( $page->ID );?>
 
 <div class="<?php echo $slug;?> <?php echo $slug;?>__page page page__image-bg <?php echo $slug;?>__page-image-bg"
   style="background-image: url(<?php echo $image;?>)">
+  <a name="contacto"></a>
   <div class="<?php echo $slug;?>__container container">
     <div class="<?php echo $slug;?>__page-left page__left">
       <?php echo do_shortcode("[ninja_form id=".$redes["form"]."]"); ?>

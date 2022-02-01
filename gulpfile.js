@@ -89,7 +89,17 @@ function reload(done) {
 }
 
 function copy(cb) {
-  src(['images/', 'bundle.js', 'style.css'], {base: './'})
+  src([
+    'images/**/*',
+    'src/template-parts/**/*',
+    'bundle.js',
+    'style.css',
+    'footer.php',
+    'functions.php',
+    'header.php',
+    'index.php',
+    'screenshot.jpg'
+  ], {base: './'})
   .pipe(gulp.dest('dist/'))
   cb()
 }

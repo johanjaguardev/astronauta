@@ -48,11 +48,19 @@
     position: relative;
   }
   &__menu {
+    @media screen and (max-width: $screen__M) {
+      display: none;
+    }
     ul {
+      display: flex;
+      flex-direction: row;
+      gap: rem(30px);
       list-style: none;
+
       li {
         a {
           color: $color__white;
+          font-size: rem(18px);
           font-weight: 600;
           text-decoration: none;
         }
