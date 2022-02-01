@@ -2,6 +2,10 @@
   &__container {
     display: flex;
     flex-direction: row;
+
+    @media screen and (max-width: $screen__M) {
+      flex-direction: column;
+    } 
   }
 
   &__page {
@@ -61,6 +65,10 @@
     font-size: rem(48px);
     font-weight: 600;
     text-align: left;
+
+    @media screen and (max-width: $screen__M) { 
+      color: $color__purple-dark;
+    }
   }
 
   &__social {

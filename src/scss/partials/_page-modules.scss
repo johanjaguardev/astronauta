@@ -74,9 +74,11 @@
       }
 
       h3 {
-        bottom: rem(-60px);
+        bottom: rem(-90px);
         font-size: rem(20px);
+        height: rem(50px);
         position: absolute;
+        text-align: center;
       }
     }
   }
@@ -121,7 +123,7 @@
 
     h3 {
       color: $color__cyan;
-      font-size: rem(64px);
+      font-size: rem(50px);
       margin: rem(20px) 0; 
       text-align: center;
     }
@@ -148,7 +150,9 @@
   &__img {
     border-radius: rem(96px);
     margin-left: rem(30px);
-    max-width: 75%;
+    min-height: rem(200px);
+    max-height: (380px);
+    max-width: 100%;
   }
 
   &__content {
@@ -157,7 +161,7 @@
     box-sizing: border-box;
     box-shadow: 5px 5px 15px 5px rgba($color__cyan, 0.5) ;
     font-size: rem(24px);
-    margin: rem(-70px) 0 0 rem(30px);
+    margin: rem(-10px) 0 0 rem(30px);
     padding: rem(24px);
     width: 66%;
   }

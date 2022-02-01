@@ -554,6 +554,11 @@ body {
   display: flex;
   flex-direction: row;
 }
+@media screen and (max-width: 768px) {
+  .contacto__container {
+    flex-direction: column;
+  }
+}
 .contacto__page-left {
   background-color: white;
   border-radius: 2.5rem;
@@ -604,6 +609,11 @@ body {
   font-size: 3rem;
   font-weight: 600;
   text-align: left;
+}
+@media screen and (max-width: 768px) {
+  .contacto h2 {
+    color: #171b3f;
+  }
 }
 .contacto__social {
   background-image: url(images/redes.png);
