@@ -28,4 +28,11 @@
       }
     }
   }
+
+  h2 {
+    @media screen and (max-width: $screen__L) {
+      margin: rem(250px) 0 0 0;
+      padding: 0;
+    }
+  }
 }

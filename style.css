@@ -67,6 +67,11 @@ body {
   justify-content: flex-start;
   padding: 7.5rem 0;
 }
+@media screen and (max-width: 768px) {
+  .page {
+    padding: 0rem 0;
+  }
+}
 .page__image-bg {
   background-position: top left;
   background-repeat: no-repeat;
@@ -167,6 +172,12 @@ body {
 }
 .siema__dot:hover {
   background-color: #171b3f;
+}
+@media screen and (max-width: 768px) {
+  .siema figure {
+    margin: 0;
+    padding: 0;
+  }
 }
 
 .header {
@@ -303,8 +314,20 @@ body {
     display: flex;
     flex-direction: row;
   }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .home__page-left {
+    flex-direction: column;
+  }
+}
+@media screen and (max-width: 768px) {
   .home__page-link {
     margin: 0 1.25rem;
+  }
+}
+@media screen and (max-width: 768px) and (max-width: 768px) {
+  .home__page-link {
+    margin: 2.5rem 1.25rem;
   }
 }
 
@@ -336,6 +359,12 @@ body {
   .hero__page-image-bg {
     background-position: 0rem 0rem;
     background-size: contain;
+  }
+}
+@media screen and (max-width: 1366px) {
+  .hero h2 {
+    margin: 15.625rem 0 0 0;
+    padding: 0;
   }
 }
 
@@ -447,6 +476,11 @@ body {
   gap: 6.5625rem;
   justify-content: space-evenly;
 }
+@media screen and (max-width: 768px) {
+  .modulos__grid {
+    gap: 0.625rem;
+  }
+}
 .modulos__item {
   padding-bottom: 4.375rem;
 }
@@ -513,6 +547,11 @@ body {
   top: 5%;
   width: 90vw;
 }
+@media screen and (max-width: 768px) {
+  .modulos__2-box {
+    padding: 0.625rem;
+  }
+}
 .modulos__2 svg {
   width: 8.125rem;
 }
@@ -526,6 +565,11 @@ body {
   display: flex;
   flex-direction: row;
 }
+@media screen and (max-width: 768px) {
+  .modulos__2-row-1 {
+    flex-direction: column;
+  }
+}
 .modulos__2-row-2 {
   display: flex;
   flex-direction: row;
@@ -536,12 +580,22 @@ body {
   justify-content: center;
   width: 33%;
 }
+@media screen and (max-width: 768px) {
+  .modulos__2-left {
+    width: 100%;
+  }
+}
 .modulos__img {
   border-radius: 6rem;
   margin-left: 1.875rem;
   min-height: 12.5rem;
   max-height: 380px;
   max-width: 100%;
+}
+@media screen and (max-width: 768px) {
+  .modulos__img {
+    margin-left: 0;
+  }
 }
 .modulos__content {
   background-color: white;
@@ -552,6 +606,15 @@ body {
   margin: -0.625rem 0 0 1.875rem;
   padding: 1.5rem;
   width: 66%;
+}
+@media screen and (max-width: 768px) {
+  .modulos__content {
+    font-size: 1.125rem;
+    width: 100%;
+    margin: 0;
+    padding: 10px;
+    border-radius: 20px;
+  }
 }
 
 .clientes {

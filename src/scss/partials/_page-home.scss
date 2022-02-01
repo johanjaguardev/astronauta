@@ -45,10 +45,18 @@
       &-left {
         display: flex;
         flex-direction: row;
+
+        @media screen and (max-width: $screen__M) {
+          flex-direction: column;
+        }
       }
 
       &-link {
         margin: 0 rem(20px);
+
+        @media screen and (max-width: $screen__M) {
+          margin: rem(40px) rem(20px);
+        }
       }
     }
   }
