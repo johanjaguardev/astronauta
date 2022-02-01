@@ -22,6 +22,7 @@ License URI: http://www.gnu.org/licenses/gpl-2.0.html
 .. 08. Utilities
 */
 @import url("https://fonts.googleapis.com/css2?family=Maven+Pro:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Exo:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Maven+Pro:wght@400;500;600;700;800;900&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 /*
 Small (smaller than 640px)
 Medium (641px to 1007px)
@@ -34,7 +35,7 @@ body {
   background-size: initial;
   display: flex;
   flex-direction: column;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Exo", sans-serif;
   font-size: 16px;
   margin: 0;
   padding: 0;
@@ -459,9 +460,11 @@ body {
   width: 8.125rem;
 }
 .modulos__svg-1 h3 {
-  bottom: -3.75rem;
+  bottom: -5.625rem;
   font-size: 1.25rem;
+  height: 3.125rem;
   position: absolute;
+  text-align: center;
 }
 .modulos__title-1 {
   color: white;
@@ -498,7 +501,7 @@ body {
 }
 .modulos__2 h3 {
   color: #1ce6ea;
-  font-size: 4rem;
+  font-size: 3.125rem;
   margin: 1.25rem 0;
   text-align: center;
 }
@@ -519,7 +522,9 @@ body {
 .modulos__img {
   border-radius: 6rem;
   margin-left: 1.875rem;
-  max-width: 75%;
+  min-height: 12.5rem;
+  max-height: 380px;
+  max-width: 100%;
 }
 .modulos__content {
   background-color: white;
@@ -527,7 +532,7 @@ body {
   box-sizing: border-box;
   box-shadow: 5px 5px 15px 5px rgba(28, 230, 234, 0.5);
   font-size: 1.5rem;
-  margin: -4.375rem 0 0 1.875rem;
+  margin: -0.625rem 0 0 1.875rem;
   padding: 1.5rem;
   width: 66%;
 }
@@ -568,7 +573,7 @@ body {
 }
 .contacto .nf-element::placeholder {
   color: #171b3f !important;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Exo", sans-serif;
   font-size: 1.25rem !important;
   font-weight: 400;
 }
@@ -579,7 +584,7 @@ body {
   border-radius: 1rem !important;
   color: white;
   display: flex;
-  font-family: "Maven Pro", sans-serif;
+  font-family: "Exo", sans-serif;
   font-size: 1.5rem !important;
   font-weight: 600;
   justify-content: center;
