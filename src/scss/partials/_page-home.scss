@@ -12,9 +12,9 @@
     margin-top: -106vh;
     position: relative;
     z-index: 2;
-
-    @media screen and (max-width: $screen__L) {
-
+    
+    @media screen and (max-width: $screen__M) {
+      margin-top: -90vh;
     }
 
     h2 {

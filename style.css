@@ -310,6 +310,11 @@ body {
   position: relative;
   z-index: 2;
 }
+@media screen and (max-width: 768px) {
+  .home__page {
+    margin-top: -90vh;
+  }
+}
 .home__page h2 {
   display: none;
 }
@@ -454,6 +459,11 @@ body {
     width: 110%;
   }
 }
+@media screen and (max-width: 768px) {
+  .objetivos-siema__sides {
+    width: 100%;
+  }
+}
 .objetivos-siema__item {
   align-items: center;
   border-radius: 1.875rem;
@@ -534,7 +544,7 @@ body {
   gap: 6.5625rem;
   justify-content: space-evenly;
 }
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1366px) {
   .modulos__grid {
     gap: 0.625rem;
   }

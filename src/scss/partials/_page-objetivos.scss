@@ -40,6 +40,11 @@
       @media screen and (max-width: $screen__L) {
         width: 110%;
       }
+
+      @media screen and (max-width: $screen__M) {
+        width: 100%;
+      }
+  
     }
 
     &__item {

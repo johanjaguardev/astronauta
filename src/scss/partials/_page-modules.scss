@@ -28,8 +28,7 @@
     flex-wrap: wrap;
     gap: rem(105px);
     justify-content: space-evenly;
-
-    @media screen and (max-width: $screen__M) {
+    @media screen and (max-width: $screen__L) {
       gap: rem(10px);
     }
   }

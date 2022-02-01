@@ -1,10 +1,17 @@
 const initSiema = (selector, perPage) => {
+  let perPageNumber = perPage.XL
+  if ( window.innerWidth < 768 ) {
+    perPageNumber = perPage.L
+  } else if ( window.innerWidth < 414 ) {
+    perPageNumber = perPage.M
+  }
+
   if( document.querySelector(`.${selector}-siema`) ) {
     const siema = new Siema({
       selector: `.${selector}-siema`,
       duration: 200,
       easing: 'ease-out',
-      perPage: perPage, 
+      perPage: perPageNumber, 
       startIndex: 0,
       draggable: true,
       multipleDrag: true,
@@ -36,8 +43,8 @@ const initSiema = (selector, perPage) => {
       })
     }
   }
-}
-initSiema('test', 3)
-initSiema('objetivos', 2)
-initSiema('clientes', 2) 
+} 
+initSiema('test', {XL: 3, L: 3, M:3})
+initSiema('objetivos', {XL: 2, L: 2, M:1})
+initSiema('clientes', {XL: 2, L: 2, M:1}) 
 
