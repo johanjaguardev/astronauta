@@ -21,6 +21,18 @@
         font-size: rem(48px);
         font-weight: 600;
         text-align: center;
+
+            
+        @media screen and (max-width: $screen__M) {
+          font-size: rem(42px);
+        }
+      }
+    }
+
+    &-right {
+      @media screen and (max-width: $screen__M) {
+        box-sizing: border-box;
+        padding: 0 rem(20px);
       }
     }
   }
@@ -68,6 +80,8 @@
 
     @media screen and (max-width: $screen__M) { 
       color: $color__purple-dark;
+      font-size: rem(38px);
+      text-align: center;
     }
   }
 

@@ -104,6 +104,11 @@ body {
   color: white;
   font-size: 4.5rem;
 }
+@media screen and (max-width: 768px) {
+  .page h2 {
+    font-size: 2.625rem;
+  }
+}
 .page__content p {
   color: white;
   font-size: 1.5rem;
@@ -745,6 +750,17 @@ body {
   font-weight: 600;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .contacto__page-left h3 {
+    font-size: 2.625rem;
+  }
+}
+@media screen and (max-width: 768px) {
+  .contacto__page-right {
+    box-sizing: border-box;
+    padding: 0 1.25rem;
+  }
+}
 .contacto .nf-element {
   border-color: #467bfd !important;
   border-radius: 1.5625rem !important;
@@ -786,6 +802,8 @@ body {
 @media screen and (max-width: 768px) {
   .contacto h2 {
     color: #171b3f;
+    font-size: 2.375rem;
+    text-align: center;
   }
 }
 .contacto__social {

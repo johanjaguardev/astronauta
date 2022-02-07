@@ -75,6 +75,10 @@ body {
   h2 {
     color: $color__white;
     font-size: rem(72px);
+    
+    @media screen and (max-width: $screen__M) {
+      font-size: rem(42px);
+    }
   }
 
   &__content  {
