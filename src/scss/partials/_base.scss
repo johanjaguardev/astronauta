@@ -36,6 +36,7 @@ body {
 
   @media screen and (max-width: $screen__M) {
     padding: rem(0px) 0;
+    overflow-x: hidden;
   }
 
   &__image-bg {
@@ -74,13 +75,29 @@ body {
   h2 {
     color: $color__white;
     font-size: rem(72px);
+    
+    @media screen and (max-width: $screen__M) {
+      font-size: rem(42px);
+    }
   }
 
-  &__content p {
-    color: $color__white;
-    font-size: rem(24px);
-    font-weight: 100;
-    line-height: 1.5;
+  &__content  {
+    p {
+      color: $color__white;
+      font-size: rem(24px);
+      font-weight: 100;
+      line-height: 1.5;
+      
+    }
+    
+    @media screen and (max-width: $screen__M) {
+      padding: 0 rem(20px);
+
+      p {
+        font-weight: 500;
+        font-size: rem(18px);
+      }
+    }
   }
 }
 

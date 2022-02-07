@@ -28,4 +28,8 @@
       }
     }
   }
+  @media screen and (max-width: $screen__M) {
+    transform: scale(0.7);
+  }
+
 }

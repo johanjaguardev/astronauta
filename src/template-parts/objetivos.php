@@ -55,6 +55,167 @@ $conteo = 0;
         </article>
     <?php endwhile;
   endif;?>
+
+  <!-- start dummy -->
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+      <?php if ( $conteo%2 == 0 ):?>
+        <article class="objetivos-siema__item pair">
+      <?php else:?>
+        <article class="objetivos-siema__item unpair">
+      <?php endif;?>
+          <div class="objetivos-siema__left">
+            <div class="objetivos-siema__number">
+              <?php echo $conteo;?>
+            </div>
+          </div>
+          <div class="objetivos-siema__right">
+            <h3 class="objetivos-siema__title"><?php the_title(); ?></h3>
+            <div class="objetivos-siema__content">
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>">...</a>
+            </div>
+          </div>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+      <?php if ( $conteo%2 == 0 ):?>
+        <article class="objetivos-siema__item pair">
+      <?php else:?>
+        <article class="objetivos-siema__item unpair">
+      <?php endif;?>
+          <div class="objetivos-siema__left">
+            <div class="objetivos-siema__number">
+              <?php echo $conteo;?>
+            </div>
+          </div>
+          <div class="objetivos-siema__right">
+            <h3 class="objetivos-siema__title"><?php the_title(); ?></h3>
+            <div class="objetivos-siema__content">
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>">...</a>
+            </div>
+          </div>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+      <?php if ( $conteo%2 == 0 ):?>
+        <article class="objetivos-siema__item pair">
+      <?php else:?>
+        <article class="objetivos-siema__item unpair">
+      <?php endif;?>
+          <div class="objetivos-siema__left">
+            <div class="objetivos-siema__number">
+              <?php echo $conteo;?>
+            </div>
+          </div>
+          <div class="objetivos-siema__right">
+            <h3 class="objetivos-siema__title"><?php the_title(); ?></h3>
+            <div class="objetivos-siema__content">
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>">...</a>
+            </div>
+          </div>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+      <?php if ( $conteo%2 == 0 ):?>
+        <article class="objetivos-siema__item pair">
+      <?php else:?>
+        <article class="objetivos-siema__item unpair">
+      <?php endif;?>
+          <div class="objetivos-siema__left">
+            <div class="objetivos-siema__number">
+              <?php echo $conteo;?>
+            </div>
+          </div>
+          <div class="objetivos-siema__right">
+            <h3 class="objetivos-siema__title"><?php the_title(); ?></h3>
+            <div class="objetivos-siema__content">
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>">...</a>
+            </div>
+          </div>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+      <?php if ( $conteo%2 == 0 ):?>
+        <article class="objetivos-siema__item pair">
+      <?php else:?>
+        <article class="objetivos-siema__item unpair">
+      <?php endif;?>
+          <div class="objetivos-siema__left">
+            <div class="objetivos-siema__number">
+              <?php echo $conteo;?>
+            </div>
+          </div>
+          <div class="objetivos-siema__right">
+            <h3 class="objetivos-siema__title"><?php the_title(); ?></h3>
+            <div class="objetivos-siema__content">
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>">...</a>
+            </div>
+          </div>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+      <?php if ( $conteo%2 == 0 ):?>
+        <article class="objetivos-siema__item pair">
+      <?php else:?>
+        <article class="objetivos-siema__item unpair">
+      <?php endif;?>
+          <div class="objetivos-siema__left">
+            <div class="objetivos-siema__number">
+              <?php echo $conteo;?>
+            </div>
+          </div>
+          <div class="objetivos-siema__right">
+            <h3 class="objetivos-siema__title"><?php the_title(); ?></h3>
+            <div class="objetivos-siema__content">
+              <?php the_excerpt(); ?>
+              <a href="<?php the_permalink(); ?>">...</a>
+            </div>
+          </div>
+        </article>
+    <?php endwhile;
+  endif;?>
+
+
+  <!-- end dummy -->
       </div>
       <div class="objetivos-siema__sides siema__sides">
         <button class="objetivos-siema__side siema__side siema__prev"><</button>
