@@ -31,7 +31,7 @@
       }
 
       @media screen and (max-width: $screen__M) {
-        background-position: rem(0px) rem(0px);
+        background-position: rem(50px) rem(0px);
         background-size: contain;
       }
     }
@@ -43,7 +43,9 @@
       margin: rem(0px) 0 0 0;
     }
     @media screen and (max-width: $screen__M) {
-      margin: rem(250px) 0 0 0;
+      font-size: rem(42px);
+      margin: rem(200px) 0 0 0;
+      text-align: center;
       padding: 0;
     }
   }

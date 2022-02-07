@@ -41,6 +41,166 @@ $conteo = 0;
         </article>
     <?php endwhile;
   endif;?>
+
+  <!-- start dummy -->
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+  <?php if ( $arr_posts->have_posts() ) :
+    while ( $arr_posts->have_posts() ) :
+      $arr_posts->the_post();
+        array_push($arr_dots, $conteo);
+        $conteo++;
+      ?>
+        <article class="clientes-siema__item">
+          <figure class="clientes__figure">
+            <img src="<?php echo get_the_post_thumbnail_url( $post->ID );?>" class="clientes__img"/>  
+          </figure>
+        </article>
+    <?php endwhile;
+  endif;?>
+<!-- end dummy -->
+
       </div>
       <div class="clientes-siema__sides siema__sides">
         <button class="clientes-siema__side siema__side siema__prev"><</button>

@@ -70,6 +70,7 @@ body {
 @media screen and (max-width: 768px) {
   .page {
     padding: 0rem 0;
+    overflow-x: hidden;
   }
 }
 .page__image-bg {
@@ -108,6 +109,15 @@ body {
   font-size: 1.5rem;
   font-weight: 100;
   line-height: 1.5;
+}
+@media screen and (max-width: 768px) {
+  .page__content {
+    padding: 0 1.25rem;
+  }
+  .page__content p {
+    font-weight: 500;
+    font-size: 1.125rem;
+  }
 }
 
 .btn {
@@ -269,6 +279,12 @@ body {
   top: 0.625rem;
   right: 0.625rem;
 }
+@media screen and (max-width: 768px) {
+  .header__logo img {
+    height: auto;
+    max-width: 275px;
+  }
+}
 
 .hamburguer {
   align-items: flex-end;
@@ -294,6 +310,11 @@ body {
 }
 .hamburguer.open .hamburguer__stick-2 {
   opacity: 0;
+}
+@media screen and (max-width: 768px) {
+  .hamburguer {
+    transform: scale(0.7);
+  }
 }
 
 .home__container {
@@ -331,13 +352,15 @@ body {
 }
 @media screen and (max-width: 768px) {
   .home__page-content {
-    font-size: 2.625rem;
+    margin-bottom: 3.125rem;
   }
   .home__page-content strong, .home__page-content b {
-    font-size: 2.25rem;
+    font-size: 2rem;
   }
   .home__page-content p {
+    font-size: 2rem;
     margin: 0;
+    text-align: center;
   }
 }
 @media screen and (max-width: 768px) {
@@ -398,7 +421,7 @@ body {
 }
 @media screen and (max-width: 768px) {
   .hero__page-image-bg {
-    background-position: 0rem 0rem;
+    background-position: 3.125rem 0rem;
     background-size: contain;
   }
 }
@@ -409,7 +432,9 @@ body {
 }
 @media screen and (max-width: 768px) {
   .hero h2 {
-    margin: 15.625rem 0 0 0;
+    font-size: 2.625rem;
+    margin: 12.5rem 0 0 0;
+    text-align: center;
     padding: 0;
   }
 }
