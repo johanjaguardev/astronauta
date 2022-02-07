@@ -28,6 +28,7 @@
     flex-wrap: wrap;
     gap: rem(105px);
     justify-content: space-evenly;
+
     @media screen and (max-width: $screen__L) {
       gap: rem(10px);
     }
@@ -83,6 +84,23 @@
         position: absolute;
         text-align: center;
       }
+
+      @media screen and (max-width: $screen__M) {
+        border-radius: rem(20px);
+        height: rem(100px);
+        width: rem(100px);
+
+        svg {
+          width: rem(50px);
+        }
+
+        h3 {
+          bottom: rem(-70px);
+          font-size: rem(16px);
+          height: rem(45px);
+        }
+      }
+
     }
   }
 

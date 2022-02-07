@@ -615,6 +615,21 @@ body {
   position: absolute;
   text-align: center;
 }
+@media screen and (max-width: 768px) {
+  .modulos__svg-1 {
+    border-radius: 1.25rem;
+    height: 6.25rem;
+    width: 6.25rem;
+  }
+  .modulos__svg-1 svg {
+    width: 3.125rem;
+  }
+  .modulos__svg-1 h3 {
+    bottom: -4.375rem;
+    font-size: 1rem;
+    height: 2.8125rem;
+  }
+}
 .modulos__title-1 {
   color: white;
 }
