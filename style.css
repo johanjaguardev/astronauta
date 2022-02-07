@@ -744,6 +744,12 @@ body {
   padding: 2.5rem;
   margin-right: 3.125rem;
 }
+@media screen and (max-width: 768px) {
+  .contacto__page-left {
+    background-color: transparent;
+    padding: 0 1.25rem;
+  }
+}
 .contacto__page-left h3 {
   color: #171b3f;
   font-size: 3rem;

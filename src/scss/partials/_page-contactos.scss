@@ -16,6 +16,11 @@
       padding: rem(40px);
       margin-right: rem(50px);
 
+      @media screen and (max-width: $screen__M) {
+        background-color: transparent;
+        padding: 0 rem(20px);
+      }
+
       h3 {
         color: $color__purple-dark;
         font-size: rem(48px);
