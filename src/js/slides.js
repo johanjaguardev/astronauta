@@ -45,6 +45,6 @@ const initSiema = (selector, perPage) => {
   }
 } 
 initSiema('test', {XL: 3, L: 3, M:3})
-initSiema('objetivos', {XL: 2, L: 2, M:1})
-initSiema('clientes', {XL: 2, L: 2, M:1}) 
+initSiema('objetivos', {XL: 2, L: 1, M:1})
+initSiema('clientes', {XL: 2, L: 1, M:1}) 
 
